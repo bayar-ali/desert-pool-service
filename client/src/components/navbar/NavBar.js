@@ -18,8 +18,8 @@ const NavbarRx = () => {
                 <Navbar.Brand href="/">
                     <Image
                         src={PoolServiceLogo}
-                        width="30"
-                        height="30"
+                        width="100"
+                        height="100"
                         className="d-inline-block align-top"
                         alt="Desert Pool Service"
                     />
