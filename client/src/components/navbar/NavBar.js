@@ -4,9 +4,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import { Nav, MenuItem } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+// import MenuItem from "react-bootstrap/MenuItem";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavbarRx = () => {
     return (
@@ -28,7 +30,7 @@ const NavbarRx = () => {
                 <Nav>
                     <NavLink to="/">Login</NavLink>
                     <NavDropdown title="Customers" id="basic-nav-dropdown">
-                        <MenuItem href="#/customers">Customers</MenuItem>
+                        <NavDropdown.Item href="#/customers">Customers</NavDropdown.Item>
                         {/* <NavDropdown.Item href="/viewcustomer">View Customer</NavDropdown.Item> */}
                         {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
