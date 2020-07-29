@@ -1,7 +1,7 @@
 const express = require("express");
 
 const mongoose = require("mongoose");
-const routes = require("./src/routes");
+const routes = require("./routes");
 const app = express();
 //For test
 const Customers = mongoose.model("Customers")
