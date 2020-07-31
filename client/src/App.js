@@ -23,6 +23,7 @@ class App extends Component {
     return (
   
         <Router basename={process.env.PUBLIC_URL}>
+         
           <NavBar />
           <Switch>
           <Route exact path="/" component={LandingPage} />
@@ -36,6 +37,7 @@ class App extends Component {
           {/* <LandingPage /> */}
           {/* <Footer /> */}
         </Router>
+       
      
     );
   };
