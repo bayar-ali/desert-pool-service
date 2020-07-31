@@ -1,0 +1,80 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 5px;
+   background: rgba(170, 37, 37, 0.1);
+   outline: none ;
+   border: none;
+   border-bottom: 1px dotted #fff;
+   border-radius: 5px;
+   margin: 5px;
+   font-weight: bold;
+   text-align: center;
+
+}
+
+
+
+.wrap-up {
+    max-width: 350px;
+    border-radius: 20px;
+    margin: auto;
+    background: rgba(46, 7, 7, 0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    margin-top: 100px;
+
+}
+
+
+
+.btn {
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: hsla(212, 54%, 15%, 0.1);
+    border:  1px solid hsl(201, 68%, 44%); 
+    outline: none; 
+    font-size: 1.5em;
+    color: rgb(14, 5, 5);
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.loginPage {
+    text-align: center;
+    color: #fff;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#signupform {
+    max-width: 350px;
+    border-radius: 30px;
+    margin: auto;
+    background: rgba(119, 176, 209, 0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    margin-top: 100px;
+  
+
+}
+
+.full-screen-container {
+    height: 110vh;
+    background-image: url(../../assets/images/GettyImages-874107750.jpg);
+    height: 110vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.classfied {
+    color: rgb(160, 73, 73);
+}
