@@ -1,0 +1,10 @@
+.navbar {
+    background-image: url("../../assets/images/poolwater.jpeg");
+    color: white;
+    padding-right: 120px;
+    width: 100%;
+}
+
+.navBar-font {
+    font-weight: 800;
+}
