@@ -10,22 +10,29 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "jest": "^26.2.2",
+    "nodemon": "^1.18.7",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "express-jwt": "^6.0.0",
     "express-jwt-authz": "^2.4.1",
     "if-env": "^1.0.4",
-
-    "mongoose": "^5.9.25",
-    "react-google-map": "^3.1.1",
-    "jwks-rsa": "^1.8.1"
+    "jwks-rsa": "^1.8.1",
+    "mongoose": "^5.9.27",
+    "react-google-map": "^3.1.1"
   }
 }
