@@ -12,6 +12,7 @@ import ViewCustomer from "./components/pages/ViewCustomer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+
 class App extends Component {
 
   // Setting this.state.customers to the cutomers db
