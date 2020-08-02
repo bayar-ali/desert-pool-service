@@ -22,3 +22,11 @@ h1, h4, li, h3 {
 li, h3, h4, h1 {
         font-weight: bold;
 }
+
+.imageBKGR {
+        background: url(../../assets/images/poolwater.jpeg) no-repeat center center fixed;
+        background-color: rgb(223, 193, 193);
+        /* height: 120vh; */
+        background-size: cover;
+        background-repeat: no-repeat;
+}

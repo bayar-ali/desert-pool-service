@@ -22,14 +22,14 @@ function LandingPage() {
                         height="100%"
                     ></img>
                 </Col>
-                <Col lg={6} className="text-center">
+                <Col lg={6} className="imageBKGR, text-center">
                     <br></br>
                     <h1>Your Local pool professional</h1>
                     <h4>We enjoy what we do so you can enjoy your pool</h4>
                 </Col>
             </Row>
             <Row>
-                <Col lg={6}>
+                <Col lg={6} className="imageBKGR">
 
                     <h3>Chemicals</h3>
                     <ul>
@@ -59,7 +59,7 @@ function LandingPage() {
                         height="100%"
                     ></img>
                 </Col>
-                <Col lg={6}>
+                <Col lg={6} className="imageBKGR">
                     <ul>
                         <h3>Weekly service includes</h3>
 
