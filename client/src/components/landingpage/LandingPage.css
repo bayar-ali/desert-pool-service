@@ -1,14 +1,24 @@
 
 
-#firstSection {
+/* #firstSection {
         background: url(assets/images/gunite-spa-inground-pool.jpg) no-repeat center center fixed;
         background-color: rgb(223, 193, 193);
         height: 120vh;
         background-size: cover;
         background-repeat: no-repeat;
       
+} */
+
+.text-center, h3 {
+        text-align: center;
+        color: darkblue;
 }
 
-.text-center {
-        text-align: center;
+h1, h4, li, h3 {
+        padding: 20px;
+        color: darkblue;
+}
+
+li, h3, h4, h1 {
+        font-weight: bold;
 }
