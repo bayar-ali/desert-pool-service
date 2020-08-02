@@ -11,7 +11,7 @@ import "./LandingPage.css";
 function LandingPage() {
     return (
 
-        <Container id="firstSection">
+        <>
             <Row>
                 <Col lg={6} className="text-center">
                     <img
@@ -21,8 +21,9 @@ function LandingPage() {
                         width="100%"
                         height="100%"
                     ></img>
+                    <h1>test</h1>
                 </Col>
-                <Col lg={6} className="imageBKGR, text-center">
+                <Col lg={6} className="imageBKGR text-center">
                     <br></br>
                     <h1>Your Local pool professional</h1>
                     <h4>We enjoy what we do so you can enjoy your pool</h4>
@@ -39,7 +40,7 @@ function LandingPage() {
                     </ul>
 
                 </Col>
-                <Col lg={6} className="text-center">
+                <Col lg={6} fluid className="text-center">
                     <img
                         fluid
                         src={PoolImage2}
@@ -57,6 +58,7 @@ function LandingPage() {
                         alt="Wading Pool"
                         width="100%"
                         height="100%"
+                        padding="0"
                     ></img>
                 </Col>
                 <Col lg={6} className="imageBKGR">
@@ -75,7 +77,7 @@ function LandingPage() {
                     </ul>
                 </Col>
             </Row>
-        </Container>
+        </>
 
 
     )
