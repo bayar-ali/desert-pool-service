@@ -16,13 +16,17 @@ body {
         padding-left: 0px;
 }
 
-h1, h4, li, h3 {
+h1, h4, li, h3, .H5fontFormat {
         padding: 20px;
         color: darkblue;
 }
 
-li, h3, h4, h1 {
+h3, h4, h1 {
         font-weight: bold;
+}
+
+li {
+        font-size: large;
 }
 
 .imageBKGR {

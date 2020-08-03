@@ -9,6 +9,7 @@ import Customer from "./components/pages/Customer";
 import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import ViewCustomer from "./components/pages/ViewCustomer";
+import AddCustomer from "./components/pages/AddCustomer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact path="/customer" component={Customer} />
             {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
             <Route exact path="/viewcustomer" component={ViewCustomer} />
+            <Route exact path="/addcustomer" component={AddCustomer} />
             {/* <Route exact path="/contact" component={Contact} /> */}
           </Switch>
           {/* <LandingPage /> */}

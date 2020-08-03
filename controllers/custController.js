@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the custController
 module.exports = {
   findAll: function(req, res) {
+    console.log(req.query);
     db.Customers
       .find(req.query)
       .sort({ date: -1 })

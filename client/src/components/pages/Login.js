@@ -1,8 +1,6 @@
 import React from "react";
 import "./SignUp.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import { MDBRow, MDBCol, MDBInput, MDBContainer } from 'mdbreact';
 
 function Login() {
   return (
@@ -16,7 +14,7 @@ function Login() {
             <br></br>
             <div className="col-sm-12 py">
               <div classname="form-group">
-                <label htmlFor="username">Email</label>
+                <label htmlFor="userName">Email</label>
                 <input
                   type="text"
                   name="username"
