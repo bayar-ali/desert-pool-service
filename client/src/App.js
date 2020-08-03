@@ -10,6 +10,7 @@ import Login from "./components/pages/Login";
 import SignUp from "./components/pages/SignUp";
 import ViewCustomer from "./components/pages/ViewCustomer";
 import AddCustomer from "./components/pages/AddCustomer";
+import NoMatch from "./components/pages/NoMatch";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -22,11 +23,9 @@ class App extends Component {
   // };
 
   render() {
-    return (
-  
+    return ( 
         <Router basename={process.env.PUBLIC_URL}>
-         
-          <NavBar />
+        <NavBar />
           <Switch>
           <Route exact path="/" component={LandingPage} />
             <Route exact path="/login" component={Login} />
@@ -35,14 +34,12 @@ class App extends Component {
             {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
             <Route exact path="/viewcustomer" component={ViewCustomer} />
             <Route exact path="/addcustomer" component={AddCustomer} />
-            {/* <Route exact path="/contact" component={Contact} /> */}
+            <Route component={NoMatch} />
           </Switch>
-          {/* <LandingPage /> */}
           {/* <Footer /> */}
         </Router>
-       
-     
     );
   };
 };
+
 export default App;

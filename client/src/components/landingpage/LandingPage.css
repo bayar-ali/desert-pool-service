@@ -12,20 +12,22 @@ body {
 .text-center, h3 {
         text-align: center;
         color: darkblue;
-        padding-right: 0px;
+        padding-right: 15px;
         padding-left: 0px;
 }
 
-h1, h4, li, h3, .H5fontFormat {
-        padding: 20px;
+h1, h4, h3, .H5fontFormat {
+        padding: 10px;
         color: darkblue;
 }
 
-h3, h4, h1 {
+h3, h4, h2 {
         font-weight: bold;
 }
 
 li {
+        padding: 10px;
+        color: darkblue;
         font-size: large;
 }
 
