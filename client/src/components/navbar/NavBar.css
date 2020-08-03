@@ -1,10 +1,19 @@
 .navbar {
     background-image: url("../../assets/images/poolwater.jpeg");
-    color: white;
+    color: darkblue!important;
     padding-right: 120px;
     width: 100%;
+    text-decoration: darkblue;
+    font-weight: bolder;
 }
 
 .navBar-font {
-    font-weight: 800;
+    color: darkblue!important;
+    font-weight: bold;
+}
+
+.navBarTitle {
+    font-size: xx-large!important;
+    font-weight: bold;
+    color: darkblue!important;
 }
