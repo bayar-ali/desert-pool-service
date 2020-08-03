@@ -71,6 +71,7 @@ function LandingPage() {
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR">
                     <ul>
+                        
                         <h3>Weekly service includes</h3>
 
                         <li><h5>Brushing walls and steps</h5></li>
@@ -79,10 +80,18 @@ function LandingPage() {
 
                         <li><h5>Balance chemical</h5></li>
 
-                        <li><h5>Skim debris from pool floor and surface</h5></li>
+                     {/*    <li><h5>Skim debris from pool floor and surface</h5></li>
 
-                        <li><h5>Check equipment</h5></li>
+                        <li><h5>Check equipment</h5></li> */}
                     </ul>
+                </MDBCol>
+                <MDBCol lg="12" className="footer">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
+              
                 </MDBCol>
             </MDBRow>
         </>
