@@ -9,7 +9,7 @@ import PoolServiceLogo from "../../assets/images/Swimming-pool-service-aqua-logo
 
 const NavbarRx = () => {
     return (
-        <Navbar bsPrefix="navbar" responisve="true" expand="lg">
+        <Navbar className="navbar" responisve="true" expand="lg">
             <NavLink to="/"><Navbar.Brand><span className="navbar-title">
                 <Image
                     src={PoolServiceLogo}

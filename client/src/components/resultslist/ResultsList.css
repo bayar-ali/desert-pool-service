@@ -1,3 +1,14 @@
 .formatTable {
-    background-color: darkturquoise;
+    background-color: deepskyblue;
+}
+
+.anchorFormat {
+    font-size: xx-large;
+    color: darkblue;
+    font-weight: bold;
+    text-align: center!important;
+}
+
+.alignTable {
+    text-align: center;
 }
