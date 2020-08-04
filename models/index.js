@@ -1,4 +1,4 @@
 module.exports = {
-    Customers: require("./Customers")
-  };
-  
+  Customers: require("./Customers"),
+  WorkOrders: require("./work_orders")
+};
