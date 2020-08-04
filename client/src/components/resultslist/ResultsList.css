@@ -2,13 +2,12 @@
     background-color: deepskyblue;
 }
 
-.anchorFormat {
+.formatHeader {
     font-size: xx-large;
-    color: darkblue;
     font-weight: bold;
-    text-align: center!important;
-}
+    color: darkblue;
 
 .alignTable {
     text-align: center;
+
 }

@@ -1,7 +1,6 @@
 import React from "react";
-import { MDBDataTable, MDBCard, MDBCardHeader, MDBBtn, MDBCardBody, MDBTableHead, MDBTableBody, MDBTable, MDBInput } from 'mdbreact';
 import "./ResultsList.css"
-
+import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBDataTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 const ResultsList = (props) => {
     const customerData = {
         columns: [
@@ -11,23 +10,23 @@ const ResultsList = (props) => {
                 sort: "disabled"
             },
             {
-                label: [<i key="Lorem" className="fa fa-swimmer mr-2 blue-text" aria-hidden="true"></i>, 'Name'],
+                label: [<i key="name" className="fa fa-swimmer mr-2 blue-text" aria-hidden="true"></i>, 'Name'],
                 field: 'name',
                 sort: 'asc'
             },
             {
-                label: [<i key="Lorem" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "Address"],
+                label: [<i key="addtess" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "Address"],
                 field: 'address',
                 sort: 'asc'
             },
             {
-                label: [<i key="Lorem" className="fa fa-envelope-open-text mr-2 blue-text" aria-hidden="true"></i>, 'Email'],
+                label: [<i key="email" className="fa fa-envelope-open-text mr-2 blue-text" aria-hidden="true"></i>, 'Email'],
                 field: 'email',
                 sort: 'asc'
             }
             ,
             {
-                label: 'Phone Number',
+                label: [<i key="phone" className="fa fa-phone-volume mr-2 blue-text" aria-hidden="true"></i>, 'Phone Number'],
                 field: 'phone',
                 sort: 'asc'
             }
@@ -37,25 +36,17 @@ const ResultsList = (props) => {
 
     return (
 
-        <MDBCard narrow className="formatTable" responsive>
+
+        <MDBCard narrow responsive>
             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3">
-                {/* <div>
-                    <MDBBtn outline rounded size="sm" color="white" className="px-1">
-                        <i className="fa fa-th-large mt-0"></i>
-                    </MDBBtn>
-                    <MDBBtn outline rounded size="sm" color="white" className="px-1">
-                        <i className="fa fa-columns mt-0"></i>
-                    </MDBBtn>
-                </div> */}
                 <div>
-                    <MDBBtn outline rounded size="sm" color="white" className="px-1">
+                    <MDBBtn outline rounded size="sm" color="white" className="px-2">
                         <i className="fas fa-times mt-0"></i>
                     </MDBBtn>
                 </div>
-                <a href="#" className="white-text mx-3 anchorFormat">Desert Pool Service Customer Database</a>
+                <a href="#" className="white-text mx-3 formatHeader">Desert Pool Service Customer Database</a>
                 <div>
-
-                    <MDBBtn outline rounded size="sm" color="white" className="px-1">
+                    <MDBBtn outline rounded size="sm" color="white" className="px-2">
                         <i className="fa fa-info-circle mt-0"></i>
                     </MDBBtn>
                 </div>
@@ -71,21 +62,22 @@ const ResultsList = (props) => {
                     small
                     scrollx
                     entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
-                    data={customerData}
-                />
-                {/* </MDBTable> */}
+                    data={customerData} />
             </MDBCardBody>
         </MDBCard>
+
+
+
+        // <MDBDataTable className="formatTable"
+        //     striped
+        //     bordered
+        //     responsive
+        //     small
+        //     entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
+        //     data={customerData}
+        // />
+
     );
-    //     <MDBDataTable className="formatTable"
-    //         striped
-    //         bordered
-    //         responsive
-    //         small
-    //         entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
-    //         data={customerData}
-    //     />
-    // );
 };
 
 export default ResultsList;

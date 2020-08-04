@@ -5,6 +5,7 @@ import API from "../../utils/API"
 import Checkbox from "@material/react-checkbox"
 // import { MDBInput } from 'mdbreact';
 
+
 function Customer() {
 
     let [result, setResult] = useState([])
@@ -23,7 +24,7 @@ function Customer() {
                         select: (<Checkbox id={response.data[i]._id} />),
                         name: response.data[i].Name,
                         address: response.data[i].Address,
-                        // phone: response.data[i].Phone_Num,
+                        phone: response.data[i].Phone_Num,
                         email: response.data[i].Email
                     }
                     customerRecords.push(customer)
