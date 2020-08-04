@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Customer.css";
 import ResultsList from "../resultslist/ResultsList"
 import API from "../../utils/API"
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from "@material/react-checkbox"
+// import { MDBInput } from 'mdbreact';
+
 
 function Customer() {
 
@@ -19,7 +21,7 @@ function Customer() {
                 let customerRecords = [];
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
-                        select: (<Checkbox id={response.data[i]._id}/>),
+                        select: (<Checkbox id={response.data[i]._id} />),
                         name: response.data[i].Name,
                         address: response.data[i].Address,
                         phone: response.data[i].Phone_Num,

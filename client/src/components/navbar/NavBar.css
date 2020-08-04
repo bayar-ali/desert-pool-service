@@ -1,7 +1,7 @@
 .navbar {
     background-image: url("../../assets/images/poolwater.jpeg");
     color: darkblue!important;
-    padding-right: 120px;
+    padding-left: 50px!important;
     width: 100%;
     text-decoration: darkblue;
     font-weight: bolder;
@@ -16,4 +16,6 @@
     font-size: xx-large!important;
     font-weight: bold;
     color: darkblue!important;
+    font-family: 'Cookie', cursive;
+    font-family: 'Oleo Script', cursive;
 }

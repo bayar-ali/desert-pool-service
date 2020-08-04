@@ -1,5 +1,4 @@
 import React from "react";
-// import { MDBDataTable } from 'mdbreact';
 import "./ResultsList.css"
 import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBDataTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 const ResultsList = (props) => {
@@ -37,7 +36,8 @@ const ResultsList = (props) => {
 
     return (
 
-        <MDBCard narrow>
+
+        <MDBCard narrow responsive>
             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3">
                 <div>
                     <MDBBtn outline rounded size="sm" color="white" className="px-2">
@@ -51,16 +51,16 @@ const ResultsList = (props) => {
                     </MDBBtn>
                 </div>
             </MDBCardHeader>
-            <MDBCardBody cascade>
-                {/* <MDBTable btn fixed>
-          <MDBTableHead columns={data_panel.columns} />
-          <MDBTableBody rows={data_panel.rows} />
-        </MDBTable> */}
+            <MDBCardBody cascade alignTable>
+                {/* <MDBTable btn fixed responsive small striped entriesOptions={[5, 20, 25]} entries={5} alignTable> */}
+                {/* <MDBTableHead columns={customerData.columns} /> */}
+                {/* <MDBTableBody rows={props.customerData} /> */}
                 <MDBDataTable className="formatTable"
                     striped
                     bordered
                     responsive
                     small
+                    scrollx
                     entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
                     data={customerData} />
             </MDBCardBody>
@@ -76,6 +76,7 @@ const ResultsList = (props) => {
         //     entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
         //     data={customerData}
         // />
+
     );
 };
 

@@ -20,7 +20,7 @@ function LandingPage() {
                 <MDBCol lg="6" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        fluid="true"
+                        // fluid="true"
                         src={PoolImage}
                         alt="Granite Spa Inground Pool"
                         width="100%"
@@ -29,7 +29,7 @@ function LandingPage() {
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR text-center">
                     <br></br>
-                    <h1>Your Local pool professional</h1>
+                    <h2>Your Local pool professional</h2>
                     <h4>We enjoy what we do so you can enjoy your pool!</h4>
                     <h5 className="H5fontFormat">Desert Pool Service is the premier Gilbert pool repair service company. We maintain reasonable prices and spend the necessary time making sure we get the job done the first time around.
 
@@ -49,7 +49,7 @@ function LandingPage() {
                 <MDBCol lg="6" fluid="true" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        fluid="true"
+                        // fluid="true"
                         src={PoolImage2}
                         alt="Gazebo Pool"
                         width="100%"
@@ -61,16 +61,17 @@ function LandingPage() {
                 <MDBCol lg="6" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        fluid="true"
+                        // fluid="true"
                         src={PoolImage3}
                         alt="Wading Pool"
                         width="100%"
                         height="100%"
-                        padding="0"
+                        padding-top="10"
                     ></img></div>
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR">
                     <ul>
+                        
                         <h3>Weekly service includes</h3>
 
                         <li><h5>Brushing walls and steps</h5></li>
@@ -83,6 +84,14 @@ function LandingPage() {
 
                         <li><h5>Check equipment</h5></li>
                     </ul>
+                </MDBCol>
+                <MDBCol lg="12" className="footer">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
+              
                 </MDBCol>
             </MDBRow>
         </>
