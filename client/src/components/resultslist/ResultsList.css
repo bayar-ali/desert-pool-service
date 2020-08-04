@@ -1,3 +1,9 @@
 .formatTable {
-    background-color: darkturquoise;
+    background-color: deepskyblue;
+}
+
+.formatHeader {
+    font-size: xx-large;
+    font-weight: bold;
+    color: darkblue;
 }
