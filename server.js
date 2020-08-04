@@ -4,6 +4,7 @@ const routes = require("./routes");
 const app = express();
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
+const { WorkOrders } = require("./models");
 require('dotenv').config()
 
 //For test
@@ -58,27 +59,3 @@ app.get('/authorized', function (req, res) {
 });
 
 module.exports = app;
-
-//test seed 
-// const createCustomer = async () => {
-//   try {
-//     const customer = {
-//       Name: "Bob Smith",
-//       Address: "123 Smith Lane",
-//       Email: "bsmith@gmail.com",
-//       Salt_Pool: true,
-//       Filter: "Sand",
-//       created_date: "7/26/20",
-//       scheduled_date: "7/29/20"
-//     }
-
-//     const data = await Customers.create(customer);
-
-//     console.log(data);
-
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
-// createCustomer(); 

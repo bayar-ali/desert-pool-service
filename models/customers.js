@@ -21,7 +21,7 @@ const custSchema = new Schema({
     required: [true, 'User phone number required'],
     
   },
-  create_date: { 
+  membership_date: { 
     type: Date, 
     default: Date.now() 
   },

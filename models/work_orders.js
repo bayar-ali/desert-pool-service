@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const workOrderSchema = new Schema({
-    title: {
-        type: String,
-        required: true
+    Customer: {
+        type: Schema.Types.ObjectId,
+        ref: "Customers",
     },
-    completed: {
+    Completed: {
         type: Boolean,
         default: false,
         required: true
@@ -26,10 +26,6 @@ const workOrderSchema = new Schema({
     scheduled_date: {
         type: Date,
         default: Date.now()
-    },
-    customer: {
-        type: Schema.Types.ObjectId,
-        ref: "Customers",
     }
 });
 
