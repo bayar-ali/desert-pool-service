@@ -1,0 +1,13 @@
+.formatForm {
+    background-color: deepskyblue!important;
+    color: darkblue;
+    text-align: left;
+    padding-right: 15px!important;
+    margin-right: 15px;
+}
+
+.formatInput {
+    /* background-color: deepskyblue!important; */
+    color: darkblue;
+    text-align: left!important;
+}
