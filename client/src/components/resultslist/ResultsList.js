@@ -1,6 +1,7 @@
 import React from "react";
 import "./ResultsList.css"
-import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBDataTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardHeader, MDBBtn, MDBDataTable } from 'mdbreact';
+
 const ResultsList = (props) => {
 
     const customerData = {
@@ -46,7 +47,7 @@ const ResultsList = (props) => {
                         <i className="fas fa-times mt-0"></i>
                     </MDBBtn>
                 </div>
-                <a href="#" className="white-text mx-3 formatHeader">Desert Pool Service Customer Database</a>
+                <a href="/" className="white-text mx-3 formatHeader">Desert Pool Service Customer Database</a>
                 <div>
                     <MDBBtn outline rounded size="sm" color="white" className="px-2">
                         <i className="fa fa-info-circle mt-0"></i>
@@ -67,18 +68,6 @@ const ResultsList = (props) => {
                     data={customerData} />
             </MDBCardBody>
         </MDBCard>
-
-
-
-        // <MDBDataTable className="formatTable"
-        //     striped
-        //     bordered
-        //     responsive
-        //     small
-        //     entriesOptions={[10, 20, 30, 40, 50, 75, 100]}
-        //     data={customerData}
-        // />
-
     );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBRow, MDBCol, MDBInput, MDBContainer, MDBJumbotron } from 'mdbreact';
+import { MDBRow, MDBCol, MDBContainer, MDBJumbotron } from 'mdbreact';
 import "./NoMatch.css"
 
 function NoMatch() {

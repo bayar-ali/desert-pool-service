@@ -4,8 +4,8 @@ import ResultsList from "../resultslist/ResultsList"
 import API from "../../utils/API"
 // import Checkbox from "@material/react-checkbox"
 // import { MDBInput } from 'mdbreact';
-import ViewCustomer from "./ViewCustomer";
-import { withRouter } from "react-router";
+// import ViewCustomer from "./ViewCustomer";
+// import { withRouter } from "react-router";
 
 function Customer(props) {
 
@@ -32,7 +32,7 @@ function Customer(props) {
                 let customerRecords = [];
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
-                        select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
+                        select: (<button name="Submit" className="formatButton" onClick= {() => handleSubmit(response.data[i]._id)}>Select</button>),
                         name: response.data[i].Name,
                         address: response.data[i].Address,
                         phone: response.data[i].Phone_Num,
