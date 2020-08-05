@@ -3,7 +3,8 @@ import "./ViewCustomer.css";
 // import GoogleApiWrapper from "../mapApi/Maps";
 // import { MDBRow, MDBCol } from 'mdbreact';
 
-function ViewCustomer() {
+function ViewCustomer(props) {
+    console.log(props.match.params.id)
     return (
         <>
             <h1>View Customer Page</h1>

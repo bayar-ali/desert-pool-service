@@ -2,6 +2,7 @@ import React from "react";
 import "./ResultsList.css"
 import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBDataTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 const ResultsList = (props) => {
+
     const customerData = {
         columns: [
             {
@@ -32,7 +33,8 @@ const ResultsList = (props) => {
             }
         ],
         rows: props.customerData
-    };
+    
+};
 
     return (
 
