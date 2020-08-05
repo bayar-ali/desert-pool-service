@@ -2,17 +2,28 @@ import React, { useState, useEffect } from "react";
 import "./Customer.css";
 import ResultsList from "../resultslist/ResultsList"
 import API from "../../utils/API"
-import Checkbox from "@material/react-checkbox"
+// import Checkbox from "@material/react-checkbox"
 // import { MDBInput } from 'mdbreact';
+import ViewCustomer from "./ViewCustomer";
+import { withRouter } from "react-router";
 
-
-function Customer() {
+function Customer(props) {
 
     let [result, setResult] = useState([])
 
     useEffect(() => {
         loadCustomers()
     }, [])
+
+    function handleSubmit (id) {
+        // event.preventDefault();
+        // props.ResultsList(props.customerData);
+        // const ViewCustomerWithRouter = withRouter(ViewCustomer);
+        // props.id
+        console.log("This is.id " + id);
+        window.location.href="/viewcustomer/" + id;
+
+    }
 
     function loadCustomers() {
         API.getCustomers()
@@ -21,14 +32,15 @@ function Customer() {
                 let customerRecords = [];
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
-                        select: (<Checkbox id={response.data[i]._id} />),
+                        select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
                         name: response.data[i].Name,
                         address: response.data[i].Address,
                         phone: response.data[i].Phone_Num,
                         email: response.data[i].Email
                     }
                     customerRecords.push(customer)
-                    console.log(customerRecords)
+                    console.log("This is customer records ", customerRecords)
+    
                 }
                 setResult( customerRecords );
             })
@@ -37,6 +49,7 @@ function Customer() {
     return (
         <>
             <ResultsList customerData = {result} />
+    
         </>
     );
 };

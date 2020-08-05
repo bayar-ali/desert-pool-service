@@ -32,7 +32,7 @@ class App extends Component {
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/customer" component={Customer} />
             {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
-            <Route exact path="/viewcustomer" component={ViewCustomer} />
+            <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
             <Route exact path="/addcustomer" component={AddCustomer} />
             <Route component={NoMatch} />
           </Switch>
