@@ -6,10 +6,9 @@ const workOrderSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Customers",
     },
-    Completed: {
-        type: Boolean,
-        default: false,
-        required: true
+    Completed_date: {
+        type: Date,
+        default: Date.now()
 
     },
     Salt_Pool: {
@@ -17,12 +16,14 @@ const workOrderSchema = new Schema({
         default: false,
         required: true
     },
-    Filter: String,
-    create_date: {
-        type: Date,
-        default: Date.now(),
+    Filter: {
+        type: String, 
         required: true
     },
+    timestamps: { 
+        createdAt: { type: Date, default: Date.now },
+        updatedAt: { type: Date, default: Date.now }
+    }, 
     scheduled_date: {
         type: Date,
         default: Date.now()

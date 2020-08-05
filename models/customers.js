@@ -2,34 +2,51 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const custSchema = new Schema({
-  Name: { 
-    type: String, 
-    required: [true, 'Customer name is required'],
-    minlength: 1 
+  firstName: {
+    type: String,
+    required: [true, 'Customer first name is required'],
+    minlength: 1
   },
-  Address: { 
-    type: String, 
-    required: [true, 'Customer address is required'] 
+  lastName: {
+    type: String,
+    required: [true, 'Customer last name is required'],
+    minlength: 1
+  },
+  address: {
+    street: String,
+    city: String,
+    state: String,
+    zip: Number
   },
   Phone_Num: {
     type: Number,
-    required: [true, 'Customer phone number is required'], 
+    required: [true, 'Customer phone number is required'],
     min: [10, 'Has to be a number of at least 10 digits']
   },
-  Email: { 
-    type: String, 
-    required: [true, 'User phone number required'],
-    
+  email: {
+    type: String,
+    match: [
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      'Please add a valid email address.',
+    ],
+    required: [true, 'Please enter Email Address'],
+    unique: true,
+    lowercase: true,
+    dropDups: true
   },
-  membership_date: { 
-    type: Date, 
-    default: Date.now() 
+  membership_date: {
+    type: Date,
+    default: Date.now()
   },
   work_orders: [{
     type: Schema.Types.ObjectId,
     ref: "workOrder"
   }]
 
+});
+
+userSchema.virtual('fullname').get(function () {
+  return [this.firstname, this.lastname].filter(Boolean).join(' ');
 });
 
 const Customers = mongoose.model("Customers", custSchema);
