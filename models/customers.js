@@ -18,7 +18,7 @@ const custSchema = new Schema({
     state: String,
     zip: Number
   },
-  Phone_Num: {
+  phone_Num: {
     type: Number,
     required: [true, 'Customer phone number is required'],
     min: [10, 'Has to be a number of at least 10 digits']
@@ -44,11 +44,12 @@ const custSchema = new Schema({
   }]
 
 });
+//Customers full-name 
+custSchema.methods.setFullName = () => {
+  this.full_name = `${this.firstName} ${this.lastName}`
 
-userSchema.virtual('fullname').get(function () {
-  return [this.firstname, this.lastname].filter(Boolean).join(' ');
-});
-
+  return this.full_name; 
+};
 const Customers = mongoose.model("Customers", custSchema);
 
 module.exports = Customers;

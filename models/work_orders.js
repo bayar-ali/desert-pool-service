@@ -2,21 +2,21 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const workOrderSchema = new Schema({
-    Customer: {
+    customer: {
         type: Schema.Types.ObjectId,
         ref: "Customers",
     },
-    Completed_date: {
+    completed_date: {
         type: Date,
         default: Date.now()
 
     },
-    Salt_Pool: {
+    salt_Pool: {
         type: Boolean,
         default: false,
         required: true
     },
-    Filter: {
+    filter: {
         type: String, 
         required: true
     },
