@@ -9,30 +9,51 @@ import API from "../../utils/API";
 function ViewCustomer(props) {
     console.log(props.match.params.id)
 
-    let [result, setResult] = useState([])
+    let [result, setResult] = useState({})
+    let [editable, setEditable] = useState(true)
+    // let [customerData, setCustomerData] = useState({})
 
     useEffect(() => {
         loadCustomer()
     }, [])
 
+    const handleChange = (event) => {
+        // event.preventDefault();
+        const { name, value } = event.target;
+        setResult({...result, [name]: value});
+    }
+
+    const handlePush = () => {
+        setEditable(false);
+    }
+
+    const handleSave = () => {
+        API.updateCustomer(props.match.params.id, {Phone_Num: result.Phone_Num})
+        .then(response => {
+            setEditable(true);
+            alert("Customer data updated.");
+        })
+        .catch(error => console.log(error))
+    }
     function loadCustomer() {
         API.getCustomer(props.match.params.id)
             .then(response => {
-                console.log("Customer Info ", response);
-                let customerRecord = [];
-                for (let i = 0; i < response.data.length; i++) {
-                    let customer = {
-                        // select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
-                        name: response.data[i].Name,
-                        address: response.data[i].Address,
-                        phone: response.data[i].Phone_Num,
-                        email: response.data[i].Email
-                    }
-                    customerRecord.push(customer)
-                    // console.log("This is the customer record ", customerRecord)
+                console.log("Get Customer Info ", response);
+                // let customerRecord = [];
+                // for (let i = 0; i < response.data.length; i++) {
+                // let customer = {
+                //     // select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
+                //     name: response.data.Name,
+                //     address: response.data.Address,
+                //     phone: response.data.Phone_Num,
+                //     email: response.data.Email
+                // }
+                // customerRecord.push(customer)
+                // console.log("This is the customer record ", customerRecord)
 
-                }
-                setResult(customerRecord);
+                setResult(response.data);
+                // setCustomerData(response.data);
+
             })
     }
     return (
@@ -47,7 +68,20 @@ function ViewCustomer(props) {
                     </div>
                 </MDBCol>
                 <MDBCol lg="8">
-                    <CustomerCard customerRecord = {result} />
+                    <CustomerCard CustomerRecord={result} handleChange={handleChange} editable={editable} />
+                    {editable?<button
+                        onClick={handlePush}
+                    >Edit</button>:
+                    <button
+                        onClick={handleSave}
+                    >Save</button>}
+                </MDBCol>
+
+            </MDBRow>
+            <MDBRow>
+
+                <MDBCol>
+                    
                 </MDBCol>
             </MDBRow>
         </>

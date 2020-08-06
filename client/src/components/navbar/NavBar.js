@@ -25,7 +25,7 @@ const NavbarRx = () => {
                     <Nav.Link className="navBar-font" href="/login">Login</Nav.Link>
                     <NavDropdown className="navBar-font" title="Accounts" id="basic-nav-dropdown">
                         <NavDropdown.Item className="navBar-font" href="/customer">Customer</NavDropdown.Item>
-                        <NavDropdown.Item className="navBar-font" href="/viewcustomer">View Customer</NavDropdown.Item>
+                        {/* <NavDropdown.Item className="navBar-font" href="/viewcustomer">View Customer</NavDropdown.Item> */}
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                         {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />

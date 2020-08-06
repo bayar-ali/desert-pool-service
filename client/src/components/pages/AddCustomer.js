@@ -7,16 +7,19 @@ import "./AddCustomer.css";
 
 function AddCustomer() {
 
-    let [result, setResult] = useState([])
+    let [result, setResult] = useState({Name:"", Address:"", Phone_Num:"", Email:"" })
     const [formObject, setFormObject] = useState({})
     // useEffect(() => {
     //     loadCustomer()
     // }, [])
     function handleInputChange(event) {
         const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value})
+        setResult({...result, [name]: value})
       };
 
+    //   const handlePush = () => {
+    //     setEditable(false);
+    // }
       function clearFields () {
         // formObject.Name="",
         // formObject.Address="",
@@ -33,7 +36,7 @@ function AddCustomer() {
         })
             .then(response => clearFields())
             .catch(error => console.log(error));
-
+            // setResult( customerRecord );
     };
     return (
         <>
@@ -42,7 +45,7 @@ function AddCustomer() {
             <MDBRow>
 
                 <MDBCol lg="12">
-                    <CustomerCard customerRecord={result} />
+                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} editable={false}/>
                 </MDBCol>
             </MDBRow>
         </>

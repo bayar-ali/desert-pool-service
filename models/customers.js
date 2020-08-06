@@ -45,7 +45,7 @@ const custSchema = new Schema({
 
 });
 
-userSchema.virtual('fullname').get(function () {
+custSchema.virtual('fullname').get(function () {
   return [this.firstname, this.lastname].filter(Boolean).join(' ');
 });
 

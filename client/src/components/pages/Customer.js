@@ -15,14 +15,9 @@ function Customer(props) {
         loadCustomers()
     }, [])
 
-    function handleSubmit (id) {
-        // event.preventDefault();
-        // props.ResultsList(props.customerData);
-        // const ViewCustomerWithRouter = withRouter(ViewCustomer);
-        // props.id
+    function handleSubmit (id) {   
         console.log("This is.id " + id);
         window.location.href="/viewcustomer/" + id;
-
     }
 
     function loadCustomers() {
