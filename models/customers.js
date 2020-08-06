@@ -16,7 +16,7 @@ const custSchema = new Schema({
     street: String,
     city: String,
     state: String,
-    zip: Number
+    zipcode: Number
   },
   phone_Num: {
     type: Number,
@@ -47,11 +47,7 @@ const custSchema = new Schema({
 //Customers full-name 
 custSchema.methods.setFullName = () => {
   this.full_name = `${this.firstName} ${this.lastName}`
-
-custSchema.virtual('fullname').get(function () {
-  return [this.firstname, this.lastname].filter(Boolean).join(' ');
-});
-
+}
 const Customers = mongoose.model("Customers", custSchema);
 
 module.exports = Customers;
