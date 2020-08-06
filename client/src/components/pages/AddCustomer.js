@@ -7,7 +7,7 @@ import "./AddCustomer.css";
 
 function AddCustomer() {
 
-    let [result, setResult] = useState({Name:"", Address:"", Phone_Num:"", Email:"" })
+    let [result, setResult] = useState({firstName:"", lastName:"", City:"", State:"", Zip:"", Phone_Num:"", Email:"" })
     const [formObject, setFormObject] = useState({})
     // useEffect(() => {
     //     loadCustomer()
@@ -29,10 +29,10 @@ function AddCustomer() {
 
     function addCustomer() {
         API.addCustomer({
-            name: formObject.Name,
-            address: formObject.Address,
-            phone_num: formObject.Phone,
-            email: formObject.Email
+            name: result.Name,
+            address: result.Address,
+            phone_num: result.Phone,
+            email: result.Email
         })
             .then(response => clearFields())
             .catch(error => console.log(error));
