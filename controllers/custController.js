@@ -23,6 +23,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    console.log("ID = ", req.params.id)
+    console.log("Body = ", req.body)
     db.Customers
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))

@@ -3,7 +3,9 @@ import "./CustomerCard.css"
 import { MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 // import "./CustomerCard.css"
 
-function CustomerCard(props) {
+function CustomerCard({CustomerRecord, handleChange, editable}) {
+
+   
     return (
         <>
             <form className="formatForm">
@@ -12,11 +14,12 @@ function CustomerCard(props) {
                         <MDBInput
                             className="formatInput"
                             label='Customer Name'
-                            name="name"
-                            value={props.name}
-                            // onChange={this.handleChange}
+                            name="Name"
+                            value={CustomerRecord.Name}
+                            onChange={handleChange}
                             icon='user'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
@@ -28,9 +31,9 @@ function CustomerCard(props) {
                                 <MDBInput
                                     className="formatInput"
                                     label='Customer Address'
-                                    name="address"
-                                    value={props.address}
-                                    // onChange={this.handleChange}
+                                    name="Address"
+                                    value={CustomerRecord.Address}
+                                    onChange={handleChange}
                                     icon='address-book'
                                     group
                                     type='text'
@@ -44,9 +47,9 @@ function CustomerCard(props) {
                                 <MDBInput
                                     className="formatInput"
                                     label='Customer City'
-                                    name="address"
-                                    value={props.city}
-                                    // onChange={this.handleChange}
+                                    name="City"
+                                    value={CustomerRecord.City}
+                                    onChange={handleChange}
                                     icon='city'
                                     group
                                     type='text'
@@ -60,9 +63,9 @@ function CustomerCard(props) {
                                 <MDBInput
                                     className="formatInput"
                                     label='Customer State'
-                                    name="state"
-                                    value={props.city}
-                                    // onChange={this.handleChange}
+                                    name="State"
+                                    value={CustomerRecord.State}
+                                    onChange={handleChange}
                                     icon='flag-usa'
                                     group
                                     type='text'
@@ -76,9 +79,9 @@ function CustomerCard(props) {
                                 <MDBInput
                                     className="formatInput"
                                     label='Customer Zip Code'
-                                    name="zipCode"
-                                    value={props.zipCode}
-                                    // onChange={this.handleChange}
+                                    name="Zip"
+                                    value={CustomerRecord.Zip}
+                                    onChange={handleChange}
                                     icon='plane'
                                     group
                                     type='text'
@@ -92,9 +95,9 @@ function CustomerCard(props) {
                         <MDBInput
                             className="formatInput"
                             label='Customer Email Address'
-                            name="address"
-                            value={props.email}
-                            // onChange={this.handleChange}
+                            name="Email"
+                            value={CustomerRecord.Email}
+                            onChange={handleChange}
                             icon='envelope-open-text'
                             group
                             type='text'
@@ -106,9 +109,9 @@ function CustomerCard(props) {
                         <MDBInput
                             className="formatInput"
                             label='Customer Phone Number'
-                            name="address"
-                            value={props.phone}
-                            // onChange={this.handleChange}
+                            name="Phone_Num"
+                            value={CustomerRecord.Phone_Num}
+                            onChange={handleChange}
                             icon='phone'
                             group
                             type='text'

@@ -48,8 +48,10 @@ const custSchema = new Schema({
 custSchema.methods.setFullName = () => {
   this.full_name = `${this.firstName} ${this.lastName}`
 
-  return this.full_name; 
-};
+custSchema.virtual('fullname').get(function () {
+  return [this.firstname, this.lastname].filter(Boolean).join(' ');
+});
+
 const Customers = mongoose.model("Customers", custSchema);
 
 module.exports = Customers;
