@@ -10,8 +10,8 @@ export default {
         return axios.get("/api/customers/" + id)
     },
 
-    addCustomer: () => {
-        return axios.post("/api/customers")
+    addCustomer: ( customerData ) => {
+        return axios.post("/api/customers", {data: customerData})
     },
 
     updateCustomer: (id, customerData) => {

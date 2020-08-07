@@ -15,9 +15,9 @@ function Customer(props) {
         loadCustomers()
     }, [])
 
-    function handleSubmit (id) {   
+    function handleSubmit(id) {
         console.log("This is.id " + id);
-        window.location.href="/viewcustomer/" + id;
+        window.location.href = "/viewcustomer/" + id;
     }
 
     function loadCustomers() {
@@ -27,28 +27,28 @@ function Customer(props) {
                 let customerRecords = [];
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
-                        select: (<button name="Submit" className="formatButton" onClick= {() => handleSubmit(response.data[i]._id)}>Select</button>),
+                        select: (<button name="Submit" className="formatButton" onClick={() => handleSubmit(response.data[i]._id)}>Select</button>),
                         firstName: response.data[i].firstName,
                         lastName: response.data[i].lastName,
                         street: response.data[i].address.street,
                         city: response.data[i].address.city,
                         state: response.data[i].address.state,
                         zipcode: response.data[i].address.zipcode,
-                        phone: response.data[i].Phone_Num,
-                        email: response.data[i].Email
+                        phone: response.data[i].phone_num,
+                        email: response.data[i].email
                     }
                     customerRecords.push(customer)
                     console.log("This is customer records ", customerRecords)
-    
+
                 }
-                setResult( customerRecords );
+                setResult(customerRecords);
             })
     }
 
     return (
         <>
-            <ResultsList customerData = {result} />
-    
+            <ResultsList customerData={result} />
+
         </>
     );
 };
