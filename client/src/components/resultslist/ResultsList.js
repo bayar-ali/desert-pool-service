@@ -12,13 +12,33 @@ const ResultsList = (props) => {
                 sort: "disabled"
             },
             {
-                label: [<i key="name" className="fa fa-swimmer mr-2 blue-text" aria-hidden="true"></i>, 'Name'],
-                field: 'name',
+                label: [<i key="firstName" className="fa fa-swimmer mr-2 blue-text" aria-hidden="true"></i>, 'First Name'],
+                field: 'firstName',
                 sort: 'asc'
             },
             {
-                label: [<i key="addtess" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "Address"],
-                field: 'address',
+                label: [<i key="lastName" className="fa fa-swimmer mr-2 blue-text" aria-hidden="true"></i>, 'Last Name'],
+                field: 'lastName',
+                sort: 'asc'
+            },
+            {
+                label: [<i key="addtess" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "Street"],
+                field: 'street',
+                sort: 'asc'
+            },
+            {
+                label: [<i key="city" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "City"],
+                field: 'city',
+                sort: 'asc'
+            },
+            {
+                label: [<i key="state" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "State"],
+                field: 'state',
+                sort: 'asc'
+            },
+            {
+                label: [<i key="zip" className="fa fa-address-book mr-2 blue-text" aria-hidden="true"></i>, "Zip Code"],
+                field: 'zipcode',
                 sort: 'asc'
             },
             {

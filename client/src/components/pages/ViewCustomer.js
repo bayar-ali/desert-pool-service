@@ -20,7 +20,7 @@ function ViewCustomer(props) {
     const handleChange = (event) => {
         // event.preventDefault();
         const { name, value } = event.target;
-        setResult({...result, [name]: value});
+        setResult({ ...result, [name]: value });
     }
 
     const handlePush = () => {
@@ -28,12 +28,12 @@ function ViewCustomer(props) {
     }
 
     const handleSave = () => {
-        API.updateCustomer(props.match.params.id, {Phone_Num: result.Phone_Num})
-        .then(response => {
-            setEditable(true);
-            alert("Customer data updated.");
-        })
-        .catch(error => console.log(error))
+        API.updateCustomer(props.match.params.id, { firstName: result.firstName, lastName: result.lastName, address: result.address, city: result.city, state: result.state, zipcode: result.zipcode, Phone_Num: result.phone_num, Email: result.email })
+            .then(response => {
+                setEditable(true);
+                alert("Customer data updated.");
+            })
+            .catch(error => console.log(error))
     }
     function loadCustomer() {
         API.getCustomer(props.match.params.id)
@@ -69,19 +69,21 @@ function ViewCustomer(props) {
                 </MDBCol>
                 <MDBCol lg="8">
                     <CustomerCard CustomerRecord={result} handleChange={handleChange} editable={editable} />
-                    {editable?<button
+                    {editable ? <button
+                        className="formatButton"
                         onClick={handlePush}
-                    >Edit</button>:
-                    <button
-                        onClick={handleSave}
-                    >Save</button>}
+                    >Edit</button> :
+                        <button
+                            className="formatButton"
+                            onClick={handleSave}
+                        >Save</button>}
                 </MDBCol>
 
             </MDBRow>
             <MDBRow>
 
                 <MDBCol>
-                    
+
                 </MDBCol>
             </MDBRow>
         </>

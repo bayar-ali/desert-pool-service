@@ -28,8 +28,12 @@ function Customer(props) {
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
                         select: (<button name="Submit" className="formatButton" onClick= {() => handleSubmit(response.data[i]._id)}>Select</button>),
-                        name: response.data[i].Name,
-                        address: response.data[i].Address,
+                        firstName: response.data[i].firstName,
+                        lastName: response.data[i].lastName,
+                        street: response.data[i].address.street,
+                        city: response.data[i].address.city,
+                        state: response.data[i].address.state,
+                        zipcode: response.data[i].address.zipcode,
                         phone: response.data[i].Phone_Num,
                         email: response.data[i].Email
                     }
