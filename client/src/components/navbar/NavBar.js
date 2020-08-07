@@ -6,8 +6,12 @@ import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PoolServiceLogo from "../../assets/images/Swimming-pool-service-aqua-logo-580x348.jpg";
+import LoginButton from "../loginButton/loginButton";
+import LogoutButton from "../logoutButton/logoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const NavbarRx = () => {
+    const { isAuthenticated } = useAuth0();
     return (
         <Navbar className="navbar" responisve="true" expand="lg">
             <NavLink to="/"><Navbar.Brand><span className="navbar-title">
@@ -36,6 +40,7 @@ const NavbarRx = () => {
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
                 </Form> */}
+                {isAuthenticated ? <LogoutButton /> : <LoginButton />}
             </Navbar.Collapse>
         </Navbar>
     );
