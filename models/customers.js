@@ -18,7 +18,7 @@ const custSchema = new Schema({
     state: String,
     zipcode: Number
   },
-  phone_Num: {
+  phone_num: {
     type: Number,
     required: [true, 'Customer phone number is required'],
     min: [10, 'Has to be a number of at least 10 digits']

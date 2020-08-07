@@ -28,7 +28,18 @@ function ViewCustomer(props) {
     }
 
     const handleSave = () => {
-        API.updateCustomer(props.match.params.id, { firstName: result.firstName, lastName: result.lastName, address: result.address, city: result.city, state: result.state, zipcode: result.zipcode, Phone_Num: result.phone_num, Email: result.email })
+        API.updateCustomer(props.match.params.id, {
+            firstName: result.firstName,
+            lastName: result.lastName,
+            address: {
+                street: result.street,
+                city: result.city,
+                state: result.state,
+                zipcode: result.zipcode
+            },
+            phone_num: result.phone_num,
+            email: result.email
+        })
             .then(response => {
                 setEditable(true);
                 alert("Customer data updated.");
@@ -45,13 +56,23 @@ function ViewCustomer(props) {
                 //     // select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
                 //     name: response.data.Name,
                 //     address: response.data.Address,
-                //     phone: response.data.Phone_Num,
+                //     phone: response.data.phone_num,
                 //     email: response.data.Email
                 // }
                 // customerRecord.push(customer)
                 // console.log("This is the customer record ", customerRecord)
 
-                setResult(response.data);
+                setResult({
+                    firstName: response.data.firstName,
+                    lastName: response.data.lastName,
+                    street: response.data.address.street,
+                    city: response.data.address.city,
+                    state: response.data.address.state,
+                    zipcode: response.data.address.zipcode,
+                    phone_num: response.data.phone_num,
+                    email: response.data.email
+                });
+                console.log(response.data);
                 // setCustomerData(response.data);
 
             })
@@ -68,6 +89,7 @@ function ViewCustomer(props) {
                     </div>
                 </MDBCol>
                 <MDBCol lg="8">
+
                     <CustomerCard CustomerRecord={result} handleChange={handleChange} editable={editable} />
                     {editable ? <button
                         className="formatButton"

@@ -7,40 +7,42 @@ import "./AddCustomer.css";
 
 function AddCustomer() {
 
-    let [result, setResult] = useState({firstName:"", lastName:"", city:"", state:"", zip:"", phone_num:"", email:"" })
+    let [result, setResult] = useState({ firstName: "", lastName: "", city: "", state: "", zip: "", phone_num: "", email: "" })
     const [formObject, setFormObject] = useState({})
     // useEffect(() => {
     //     loadCustomer()
     // }, [])
     function handleInputChange(event) {
         const { name, value } = event.target;
-        setResult({...result, [name]: value})
-      };
+        setResult({ ...result, [name]: value })
+    };
 
     //   const handlePush = () => {
     //     setEditable(false);
     // }
-      function clearFields () {
+    function clearFields() {
         // formObject.Name="",
         // formObject.Address="",
         // formObject.Phone="",
-        // formObject.Email=""
-      }
+        // formObject.email=""
+    }
 
     function addCustomer() {
         API.addCustomer({
             firstName: result.firstName,
             lastName: result.lastName,
-            street: result.street,
-            city: result.city,
-            state: result.state,
-            zip: result.zip,
+            address: {
+                street: result.street,
+                city: result.city,
+                state: result.state,
+                zip: result.zip
+            },
             phone_num: result.phone,
             email: result.email
         })
             .then(response => clearFields())
             .catch(error => console.log(error));
-            // setResult( customerRecord );
+        // setResult( customerRecord );
     };
     return (
         <>
@@ -49,7 +51,7 @@ function AddCustomer() {
             <MDBRow>
 
                 <MDBCol lg="12">
-                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} editable={false}/>
+                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} editable={false} />}
                 </MDBCol>
             </MDBRow>
         </>

@@ -5,7 +5,7 @@ import { MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
 function CustomerCard({ CustomerRecord, handleChange, editable }) {
 
-
+console.log("CustomerRecord on CustomerCard : ", CustomerRecord)
     return (
         <>
             <form className="formatForm">
@@ -50,11 +50,12 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                         <MDBInput
                             className="formatInput"
                             label='Street Address'
-                            name="address"
-                            value={CustomerRecord.address}
+                            name="street"
+                            value={CustomerRecord.street}
                             onChange={handleChange}
                             icon='address-book'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
@@ -71,6 +72,7 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                             onChange={handleChange}
                             icon='city'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
@@ -87,6 +89,7 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                             onChange={handleChange}
                             icon='flag-usa'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
@@ -103,7 +106,8 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                             onChange={handleChange}
                             icon='plane'
                             group
-                            type='text'
+                            disabled={editable}
+                            type='number'
                             validate
                             error='wrong'
                             success='right'
@@ -117,10 +121,11 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                             className="formatInput"
                             label='Email Address'
                             name="email"
-                            value={CustomerRecord.Email}
+                            value={CustomerRecord.email}
                             onChange={handleChange}
                             icon='envelope-open-text'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
@@ -131,10 +136,11 @@ function CustomerCard({ CustomerRecord, handleChange, editable }) {
                             className="formatInput"
                             label='Phone Number'
                             name="phone_num"
-                            value={CustomerRecord.Phone_Num}
+                            value={CustomerRecord.phone_num}
                             onChange={handleChange}
                             icon='phone'
                             group
+                            disabled={editable}
                             type='text'
                             validate
                             error='wrong'
