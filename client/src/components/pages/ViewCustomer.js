@@ -30,6 +30,27 @@ function ViewCustomer(props) {
         setNonEditable(false);
     }
 
+    const handleDelete = () => {
+        API.deleteCustomer(props.match.params.id)
+            .then(response => {
+                alert("Customer Deleted!")
+                setResult({
+                    firstName: "",
+                    lastName: "",
+                    street: "",
+                    city: "",
+                    state: "",
+                    zipcode: "",
+                    phone_num: "",
+                    email: "",
+                    salt_pool: "",
+                    filter: "",
+                    next_date_of_service: ""
+                });
+
+            })
+    }
+
     const handleSave = () => {
         console.log("Filter ", result.filter)
         console.log("Pool ", result.salt_pool)
@@ -56,7 +77,7 @@ function ViewCustomer(props) {
             })
             .catch(error => console.log(error))
     }
-    
+
     function loadCustomer() {
         API.getCustomer(props.match.params.id)
             .then(response => {
@@ -96,7 +117,7 @@ function ViewCustomer(props) {
                         <Card.Body className="card-body-cascade text-center">
                             <GoogleApiWrapper id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
                                 <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                    frameborder="0" style={{ border:0 }} allowfullscreen></iframe>
+                                    frameborder="0" style={{ border: 0 }} allowfullscreen></iframe>
                             </GoogleApiWrapper>
                         </Card.Body>
                     </Card>
@@ -113,6 +134,10 @@ function ViewCustomer(props) {
                             className="formatButton"
                             onClick={handleSave}
                         >Save</button>}
+                    <button
+                        className="formatButton"
+                        onClick={handleDelete}
+                    >Delete Customer</button>
                 </MDBCol>
 
             </MDBRow>

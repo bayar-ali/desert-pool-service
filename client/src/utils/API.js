@@ -16,6 +16,10 @@ export default {
 
     updateCustomer: (id, customerData) => {
         return axios.put("/api/customers/" + id, customerData)
+    },
+
+    deleteCustomer: (id) => {
+        return axios.delete("/api/customers/" + id)
     }
 
 };
