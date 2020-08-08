@@ -94,7 +94,8 @@ function ViewCustomer(props) {
                     email: response.data.email,
                     salt_pool: response.data.workOrders[lastIndex].salt_pool,
                     filter: response.data.workOrders[lastIndex].filter,
-                    next_date_of_service: response.data.workOrders[lastIndex].next_date_of_service
+                    next_date_of_service: response.data.workOrders[lastIndex].next_date_of_service,
+                    coords: response.data.coords
                 });
                 console.log(response.data);
             })
@@ -115,9 +116,9 @@ function ViewCustomer(props) {
                             <h2 className="mb-0">Regular map</h2>
                         </Card.Title>
                         <Card.Body className="card-body-cascade text-center">
-                            <GoogleApiWrapper id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
-                                <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                    frameborder="0" style={{ border: 0 }} allowfullscreen></iframe>
+                            <GoogleApiWrapper customer={result} id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
+                                {/* <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed" */}
+                                {/* frameborder="0" style={{ border: 0 }} allowfullscreen></iframe> */}
                             </GoogleApiWrapper>
                         </Card.Body>
                     </Card>

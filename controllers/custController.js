@@ -33,6 +33,7 @@ module.exports = {
   update: function (req, res) {
     console.log("ID = ", req.params.id)
     console.log("Body = ", req.body)
+    //TODO: Update Lat, lng if address changes.
     db.Customers
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
