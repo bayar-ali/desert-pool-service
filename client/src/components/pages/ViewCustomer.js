@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./ViewCustomer.css";
 import "../../utils/API";
 import CustomerCard from "../customercard/CustomerCard";
-// import GoogleApiWrapper from "../mapApi/Maps";
 import { MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
+import Card from 'react-bootstrap/Card';
+import GoogleApiWrapper from "../mapApi/Maps";
+
 
 function ViewCustomer(props) {
     console.log(props.match.params.id)
@@ -91,10 +93,23 @@ function ViewCustomer(props) {
 
             <MDBRow>
                 <MDBCol lg="4">
-                    <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: 500 }}>
+                    {/* <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: 420 }}>
                         <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0"
                             style={{ border: 0 }} allowFullScreen title="Customer Map"></iframe>
-                    </div>
+                    </div> */}
+
+                    <Card className="formatCard card-cascade narrower">
+                        <Card.Title className="formatTitle view view-cascade gradient-card-header blue-gradient">
+                            <h5 className="mb-0">Regular map</h5>
+                        </Card.Title>
+                        <Card.Body className="card-body-cascade text-center">
+                            <GoogleApiWrapper id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
+                                <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" style={{ border:0 }} allowfullscreen></iframe>
+                            </GoogleApiWrapper>
+                        </Card.Body>
+                    </Card>
+
                 </MDBCol>
                 <MDBCol lg="8">
 
