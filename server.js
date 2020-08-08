@@ -38,24 +38,5 @@ app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
-// // Auth0 
-// var jwtCheck = jwt({
-//   secret: jwks.expressJwtSecret({
-//     cache: true,
-//     rateLimit: true,
-//     jwksRequestsPerMinute: 5,
-//     jwksUri: 'https://dev-4anh9rsd.us.auth0.com/.well-known/jwks.json'
-//   }),
-//   audience: 'https://desertpools-users/api',
-//   issuer: 'https://dev-4anh9rsd.us.auth0.com/',
-//   algorithms: ['RS256']
-// });
-
-
-// app.use(jwtCheck);
-
-// app.get('/authorized', function (req, res) {
-//   res.send('Secured Resource');
-// });
 
 module.exports = app;
