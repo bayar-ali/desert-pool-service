@@ -40,25 +40,26 @@ class GoogleMapsContainer extends React.Component {
       'marginLeft': 'auto',
       'marginRight': 'auto'
     }
+    console.log(this.props.customer);
     return (
       <Map
         item
-        xs = { 12 }
-        style = { style }
-        google = { this.props.google }
-        onClick = { this.onMapClick }
-        zoom = { 14 }
-        initialCenter = {{ lat: 39.648209, lng: -75.711185 }}
+        xs={12}
+        style={style}
+        google={this.props.google}
+        onClick={this.onMapClick}
+        zoom={14}
+        initialCenter={this.props.customer.coords}
       >
         <Marker
-          onClick = { this.onMarkerClick }
-          title = { 'Changing Colors Garage' }
-          position = {{ lat: 39.648209, lng: -75.711185 }}
-          name = { 'Changing Colors Garage' }
+          onClick={this.onMarkerClick}
+          title={'Changing Colors Garage'}
+          position={this.props.customer.coords}
+          name={'Changing Colors Garage'}
         />
         <InfoWindow
-          marker = { this.state.activeMarker }
-          visible = { this.state.showingInfoWindow }
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
         >
           {/* <Paper>
             <Typography
@@ -80,5 +81,5 @@ class GoogleMapsContainer extends React.Component {
   }
 }
 export default GoogleApiWrapper({
-    api: (process.env.GOOGLE_API_KEY)
+  api: (process.env.GOOGLE_API_KEY)
 })(GoogleMapsContainer)
