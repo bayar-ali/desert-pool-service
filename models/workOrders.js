@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const workOrderSchema = new Schema({
     customer: {
         type: Schema.Types.ObjectId,
@@ -9,7 +10,6 @@ const workOrderSchema = new Schema({
     completed_date: {
         type: Date,
         default: Date.now()
-
     },
     salt_Pool: {
         type: Boolean,
@@ -17,19 +17,23 @@ const workOrderSchema = new Schema({
         required: true
     },
     filter: {
-        type: String, 
+        type: String,
         required: true
     },
-    timestamps: { 
+    timestamps: {
         createdAt: { type: Date, default: Date.now },
         updatedAt: { type: Date, default: Date.now }
-    }, 
+    },
     scheduled_date: {
         type: Date,
         default: Date.now()
+    },
+    next_date_of_service: {
+        type: Date,
     }
 });
 
-const WorkOrders = mongoose.model("Work Orders", workOrderSchema);
+const WorkOrders = mongoose.model("workOrders", workOrderSchema);
+
 
 module.exports = WorkOrders;

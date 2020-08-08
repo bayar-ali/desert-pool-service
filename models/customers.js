@@ -19,8 +19,8 @@ const custSchema = new Schema({
     zipcode: Number
   },
   phone_num: {
-    type: Number,
-    required: [true, 'Customer phone number is required'],
+    type: { $type: String }, 
+    required: [true, 'Customer phone number is required. Must be in the form of (XXX) XXX-XXXX'],
     min: [10, 'Has to be a number of at least 10 digits']
   },
   email: {
@@ -38,10 +38,11 @@ const custSchema = new Schema({
     type: Date,
     default: Date.now()
   },
-  work_orders: [{
+  workOrders: {
     type: Schema.Types.ObjectId,
-    ref: "workOrder"
-  }]
+    ref: "workOrders"
+
+  }
 
 });
 //Customers full-name 

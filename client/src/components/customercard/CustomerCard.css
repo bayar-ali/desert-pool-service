@@ -4,11 +4,13 @@
     text-align: left;
     padding-right: 15px!important;
     margin-right: 15px;
+    margin-left: 15px;
     padding-left: 15px!important;
 }
 
 .formatInput {
     /* background-color: deepskyblue!important; */
-    color: darkblue;
+    color: darkblue!important;
     text-align: left!important;
+    font-weight: bold;
 }

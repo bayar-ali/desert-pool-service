@@ -5,13 +5,6 @@
     border-bottom-right-radius: 5px;
 }
 
-.formatTitle {
+h1 {
     text-align: center;
-    color: blue;
-
-}
-
-.formatCard {
-    background-color: deepskyblue;
-    height: 500px;
 }

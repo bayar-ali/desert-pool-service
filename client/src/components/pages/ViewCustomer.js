@@ -12,7 +12,7 @@ function ViewCustomer(props) {
     console.log(props.match.params.id)
 
     let [result, setResult] = useState({})
-    let [editable, setEditable] = useState(true)
+    let [nonEditable, setNonEditable] = useState(true)
     // let [customerData, setCustomerData] = useState({})
 
     useEffect(() => {
@@ -26,7 +26,7 @@ function ViewCustomer(props) {
     }
 
     const handlePush = () => {
-        setEditable(false);
+        setNonEditable(false);
     }
 
     const handleSave = () => {
@@ -40,14 +40,20 @@ function ViewCustomer(props) {
                 zipcode: result.zipcode
             },
             phone_num: result.phone_num,
-            email: result.email
+            email: result.email,
+            workOrders: {
+                salt_pool: result.salt_pool,
+                filter: result.filter,
+                next_date_of_service: result.next_date_of_service
+            }
         })
             .then(response => {
-                setEditable(true);
+                setNonEditable(true);
                 alert("Customer data updated.");
             })
             .catch(error => console.log(error))
     }
+    
     function loadCustomer() {
         API.getCustomer(props.match.params.id)
             .then(response => {
@@ -72,7 +78,9 @@ function ViewCustomer(props) {
                     state: response.data.address.state,
                     zipcode: response.data.address.zipcode,
                     phone_num: response.data.phone_num,
-                    email: response.data.email
+                    email: response.data.email,
+                    salt_pool: response.data.workOrders.salt_pool,
+                    filter: response.data.workOrders.filter
                 });
                 console.log(response.data);
                 // setCustomerData(response.data);
@@ -81,7 +89,7 @@ function ViewCustomer(props) {
     }
     return (
         <>
-            <h1>View Customer Page</h1>
+            <h1>View Customer</h1>
 
             <MDBRow>
                 <MDBCol lg="4">
@@ -105,8 +113,8 @@ function ViewCustomer(props) {
                 </MDBCol>
                 <MDBCol lg="8">
 
-                    <CustomerCard CustomerRecord={result} handleChange={handleChange} editable={editable} />
-                    {editable ? <button
+                    <CustomerCard CustomerRecord={result} handleChange={handleChange} nonEditable={nonEditable} />
+                    {nonEditable ? <button
                         className="formatButton"
                         onClick={handlePush}
                     >Edit</button> :
