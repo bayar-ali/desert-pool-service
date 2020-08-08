@@ -19,7 +19,7 @@ const custSchema = new Schema({
     zipcode: Number
   },
   phone_num: {
-    type: { $type: String }, 
+    type: { $type: String },
     required: [true, 'Customer phone number is required. Must be in the form of (XXX) XXX-XXXX'],
     min: [10, 'Has to be a number of at least 10 digits']
   },
@@ -38,11 +38,36 @@ const custSchema = new Schema({
     type: Date,
     default: Date.now()
   },
-  workOrders: {
-    type: Schema.Types.ObjectId,
-    ref: "workOrders"
-
-  }
+  workOrders: [{
+    customer: {
+      type: Schema.Types.ObjectId,
+      ref: "Customers",
+    },
+    completed_date: {
+      type: Date,
+      default: Date.now()
+    },
+    salt_Pool: {
+      type: Boolean,
+      default: false,
+      required: true
+    },
+    filter: {
+      type: String,
+      required: true
+    },
+    timestamps: {
+      createdAt: { type: Date, default: Date.now },
+      updatedAt: { type: Date, default: Date.now }
+    },
+    scheduled_date: {
+      type: Date,
+      default: Date.now()
+    },
+    next_date_of_service: {
+      type: Date,
+    }
+  }]
 
 });
 //Customers full-name 

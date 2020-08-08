@@ -26,7 +26,7 @@ const NavbarRx = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                    <Nav.Link className="navBar-font" href="/login">Login</Nav.Link>
+                    {/* <Nav.Link className="navBar-font" href="/login">Login</Nav.Link> */}
                     <NavDropdown className="navBar-font" title="Accounts" id="basic-nav-dropdown">
                         <NavDropdown.Item className="navBar-font" href="/customer">Customer</NavDropdown.Item>
                         {/* <NavDropdown.Item className="navBar-font" href="/viewcustomer">View Customer</NavDropdown.Item> */}
