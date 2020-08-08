@@ -19,3 +19,7 @@
     font-family: 'Cookie', cursive;
     font-family: 'Oleo Script', cursive;
 }
+
+.formatButton {
+    color: darkblue!important;
+}

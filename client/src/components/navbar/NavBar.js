@@ -40,8 +40,8 @@ const NavbarRx = () => {
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
                 </Form> */}
-                <LogoutButton /> 
                 <LoginButton />
+                <LogoutButton/> 
             </Navbar.Collapse>
         </Navbar>
     );
