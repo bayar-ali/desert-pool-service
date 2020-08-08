@@ -4,7 +4,6 @@ const routes = require("./routes");
 const app = express();
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
-const { WorkOrders } = require("./models");
 require('dotenv').config()
 
 //For test
@@ -38,5 +37,31 @@ app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
+var request = require("request");
+
+var options = {
+  method: 'POST',
+  url: 'https://YOUR_DOMAIN/dbconnections/signup',
+  headers: {'content-type': 'application/json'},
+  body: {
+    client_id: 'YOUR_CLIENT_ID',
+    email: '$(\'#signup-email\').val()',
+    password: '$(\'#signup-password\').val()',
+    connection: 'YOUR_CONNECTION_NAME',
+    name: '$(\'#name\').val()',
+    user_metadata: {color: 'red'}
+  },
+  json: true
+};
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+// app.post('/dev-4anh9rsd.us.auth0.com/dbconnections/signup', function (req, res) {
+//   req.body()
+// })
 
 module.exports = app;
