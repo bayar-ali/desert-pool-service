@@ -11,7 +11,7 @@ export default {
     },
 
     addCustomer: ( customerData ) => {
-        return axios.post("/api/customers", {data: customerData})
+        return axios.post("/api/customers", customerData)
     },
 
     updateCustomer: (id, customerData) => {

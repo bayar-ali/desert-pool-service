@@ -3,7 +3,7 @@ import API from "../../utils/API";
 import { MDBRow, MDBCol } from 'mdbreact';
 import CustomerCard from "../customercard/CustomerCard"
 import "./AddCustomer.css";
-
+import moment from "moment";
 
 function AddCustomer() {
 
@@ -50,7 +50,12 @@ function AddCustomer() {
                 zipcode: result.zipcode
             },
             phone_num: result.phone_num,
-            email: result.email
+            email: result.email,
+            workOrders: {
+                salt_pool: result.salt_pool,
+                filter: result.filter,
+                next_date_of_service: moment(result.next_date_of_service).toISOString()
+            }
         })
             .then(response => {
                 clearFields();
