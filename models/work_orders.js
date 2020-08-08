@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const workOrderSchema = new Schema({
     customer: {
         type: Schema.Types.ObjectId,
@@ -9,7 +10,6 @@ const workOrderSchema = new Schema({
     completed_date: {
         type: Date,
         default: Date.now()
-
     },
     salt_Pool: {
         type: Boolean,
