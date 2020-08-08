@@ -5,6 +5,14 @@
     border-bottom-right-radius: 5px;
 }
 
-h1 {
+h2 {
     text-align: center;
+    color: darkblue;
+}
+
+.formatCard {
+    height: 525px;
+    background-color: deepskyblue;
+    /* padding-bottom: 60px!important; */
+    margin-bottom: 50px;
 }

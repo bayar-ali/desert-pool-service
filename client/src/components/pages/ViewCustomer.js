@@ -83,7 +83,7 @@ function ViewCustomer(props) {
             <h1>View Customer</h1>
 
             <MDBRow>
-                <MDBCol lg="4">
+                <MDBCol lg="4" responsive="true">
                     {/* <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: 420 }}>
                         <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0"
                             style={{ border: 0 }} allowFullScreen title="Customer Map"></iframe>
@@ -91,7 +91,7 @@ function ViewCustomer(props) {
 
                     <Card className="formatCard card-cascade narrower">
                         <Card.Title className="formatTitle view view-cascade gradient-card-header blue-gradient">
-                            <h5 className="mb-0">Regular map</h5>
+                            <h2 className="mb-0">Regular map</h2>
                         </Card.Title>
                         <Card.Body className="card-body-cascade text-center">
                             <GoogleApiWrapper id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
