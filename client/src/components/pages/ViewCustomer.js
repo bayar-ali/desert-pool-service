@@ -6,6 +6,7 @@ import { MDBRow, MDBCol } from 'mdbreact';
 import API from "../../utils/API";
 import Card from 'react-bootstrap/Card';
 import GoogleApiWrapper from "../mapApi/Maps";
+import moment from "moment";
 
 
 function ViewCustomer(props) {
@@ -30,6 +31,8 @@ function ViewCustomer(props) {
     }
 
     const handleSave = () => {
+        console.log("Filter ", result.filter)
+        console.log("Pool ", result.salt_pool)
         API.updateCustomer(props.match.params.id, {
             firstName: result.firstName,
             lastName: result.lastName,
@@ -44,7 +47,7 @@ function ViewCustomer(props) {
             workOrders: {
                 salt_pool: result.salt_pool,
                 filter: result.filter,
-                next_date_of_service: result.next_date_of_service
+                next_date_of_service: moment(result.next_date_of_service).toISOString()
             }
         })
             .then(response => {
@@ -58,18 +61,7 @@ function ViewCustomer(props) {
         API.getCustomer(props.match.params.id)
             .then(response => {
                 console.log("Get Customer Info ", response);
-                // let customerRecord = [];
-                // for (let i = 0; i < response.data.length; i++) {
-                // let customer = {
-                //     // select: (<button name="Submit" onClick= {() => handleSubmit(response.data[i]._id)}>Submit</button>),
-                //     name: response.data.Name,
-                //     address: response.data.Address,
-                //     phone: response.data.phone_num,
-                //     email: response.data.Email
-                // }
-                // customerRecord.push(customer)
-                // console.log("This is the customer record ", customerRecord)
-
+                const lastIndex = response.data.workOrders.length - 1;
                 setResult({
                     firstName: response.data.firstName,
                     lastName: response.data.lastName,
@@ -79,12 +71,11 @@ function ViewCustomer(props) {
                     zipcode: response.data.address.zipcode,
                     phone_num: response.data.phone_num,
                     email: response.data.email,
-                    salt_pool: response.data.workOrders.salt_pool,
-                    filter: response.data.workOrders.filter
+                    salt_pool: response.data.workOrders[lastIndex].salt_pool,
+                    filter: response.data.workOrders[lastIndex].filter,
+                    next_date_of_service: response.data.workOrders[lastIndex].next_date_of_service
                 });
                 console.log(response.data);
-                // setCustomerData(response.data);
-
             })
     }
     return (
