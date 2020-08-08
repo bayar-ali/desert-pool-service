@@ -4,7 +4,6 @@ const routes = require("./routes");
 const app = express();
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
-const { WorkOrders } = require("./models");
 require('dotenv').config()
 
 //For test
@@ -38,5 +37,8 @@ app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
+// app.post('/dev-4anh9rsd.us.auth0.com/dbconnections/signup', function (req, res) {
+//   req.body()
+// })
 
 module.exports = app;
