@@ -30,6 +30,6 @@ const workOrderSchema = new Schema({
     }
 });
 
-const WorkOrders = mongoose.model("Work Orders", workOrderSchema);
+const WorkOrders = mongoose.model("workOrders", workOrderSchema);
 
 module.exports = WorkOrders;
