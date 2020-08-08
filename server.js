@@ -36,20 +36,19 @@ mongoose.connect(uri, {
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-
 var request = require("request");
 
 var options = {
   method: 'POST',
-  url: 'https://YOUR_DOMAIN/dbconnections/signup',
-  headers: {'content-type': 'application/json'},
+  url: 'https://dev-4anh9rsd.us.auth0.com/dbconnections/signup',
+  headers: { 'content-type': 'application/json' },
   body: {
     client_id: 'YOUR_CLIENT_ID',
     email: '$(\'#signup-email\').val()',
     password: '$(\'#signup-password\').val()',
-    connection: 'YOUR_CONNECTION_NAME',
+    connection: 'Username-Password-Authentication',
     name: '$(\'#name\').val()',
-    user_metadata: {color: 'red'}
+    user_metadata: { color: 'deepskyblue' }
   },
   json: true
 };
@@ -59,9 +58,5 @@ request(options, function (error, response, body) {
 
   console.log(body);
 });
-
-// app.post('/dev-4anh9rsd.us.auth0.com/dbconnections/signup', function (req, res) {
-//   req.body()
-// })
 
 module.exports = app;
