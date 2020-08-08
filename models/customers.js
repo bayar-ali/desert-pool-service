@@ -38,7 +38,7 @@ const custSchema = new Schema({
     type: Date,
     default: Date.now()
   },
-  work_orders: {
+  workOrders: {
     type: Schema.Types.ObjectId,
     ref: "workOrder"
   }
