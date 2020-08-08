@@ -4,3 +4,14 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+.formatTitle {
+    text-align: center;
+    color: blue;
+
+}
+
+.formatCard {
+    background-color: deepskyblue;
+    height: 500px;
+}
