@@ -6,8 +6,6 @@ import LandingPage from "./components/landingpage/LandingPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Footer from "./components/footer/Footer"
 import Customer from "./components/pages/Customer";
-import Login from "./components/pages/Login";
-import SignUp from "./components/pages/SignUp";
 import ViewCustomer from "./components/pages/ViewCustomer";
 import AddCustomer from "./components/pages/AddCustomer";
 import NoMatch from "./components/pages/NoMatch";
@@ -28,8 +26,6 @@ class App extends Component {
         <NavBar />
           <Switch>
           <Route exact path="/" component={LandingPage} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={SignUp} />
             <Route exact path="/customer" component={Customer} />
             {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
             <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
