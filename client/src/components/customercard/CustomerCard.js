@@ -204,9 +204,10 @@ function CustomerCard({ CustomerRecord, handleChange, nonEditable }) {
                             value="cartridge"
                             onChange={handleChange}
                             disabled={nonEditable}
-                            >Cartride</option>
+                            >Cartridge</option>
                             <option value="DE" name="salt_pool" disabled={nonEditable}>DE</option>
                             <option value="Sand"  name="salt_pool" disabled={nonEditable}>Sand</option>
+                            <option value="Cartridge"  name="salt_pool" disabled={nonEditable}>Cartridge</option>
                         </select>
                             <p>Salt Pool</p>
                     </MDBCol>
