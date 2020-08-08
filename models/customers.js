@@ -67,8 +67,12 @@ const custSchema = new Schema({
     next_date_of_service: {
       type: Date,
     }
-  }]
+  }],
 
+  coords: {
+    lat: { type: Number },
+    lng: { type: Number }
+  }
 });
 //Customers full-name 
 custSchema.methods.setFullName = () => {
