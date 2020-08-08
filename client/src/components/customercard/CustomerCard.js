@@ -137,7 +137,7 @@ function CustomerCard({ CustomerRecord, handleChange, nonEditable }) {
                     <MDBCol>
                         <MDBInput
                             className="formatInput"
-                            label='Phone Number'
+                            label='Phone Number ex: (xxx) xxx-xxxx'
                             name="phone_num"
                             value={CustomerRecord.phone_num}
                             onChange={handleChange}

@@ -47,7 +47,7 @@ const custSchema = new Schema({
       type: Date,
       default: Date.now()
     },
-    salt_Pool: {
+    salt_pool: {
       type: Boolean,
       default: false,
       required: true
