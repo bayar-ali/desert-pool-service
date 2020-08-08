@@ -40,7 +40,8 @@ const custSchema = new Schema({
   },
   workOrders: {
     type: Schema.Types.ObjectId,
-    ref: "workOrder"
+    ref: "workOrders"
+
   }
 
 });
