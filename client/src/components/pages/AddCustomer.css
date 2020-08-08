@@ -1,0 +1,19 @@
+.formatButton {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.formatForm {
+    background-color: deepskyblue!important;
+    color: darkblue;
+    text-align: left;
+    padding-right: 15px!important;
+    margin-right: 15px;
+    padding-left: 15px!important;
+}
+
+h1 {
+    text-align: center;
+}
