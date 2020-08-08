@@ -17,16 +17,19 @@ const workOrderSchema = new Schema({
         required: true
     },
     filter: {
-        type: String, 
+        type: String,
         required: true
     },
-    timestamps: { 
+    timestamps: {
         createdAt: { type: Date, default: Date.now },
         updatedAt: { type: Date, default: Date.now }
-    }, 
+    },
     scheduled_date: {
         type: Date,
         default: Date.now()
+    },
+    next_date_of_service: {
+        type: Date,
     }
 });
 
