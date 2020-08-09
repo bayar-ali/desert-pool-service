@@ -6,6 +6,7 @@ import PoolImage from "../../assets/images/gunite-spa-inground-pool.jpg";
 import PoolImage2 from "../../assets/images/GazeboPool.jpg";
 import PoolImage3 from "../../assets/images/WadingPool.jpg";
 import { MDBRow, MDBCol } from 'mdbreact';
+import ViewCustomer from "../pages/ViewCustomer";
 import "./LandingPage.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -18,14 +19,14 @@ function LandingPage() {
         <>
             <MDBRow>
                 <MDBCol lg="6" className="text-center">
-                <div data-aos="flip-left">
-                    <img
-                        // fluid="true"
-                        src={PoolImage}
-                        alt="Granite Spa Inground Pool"
-                        width="100%"
-                        height="100%"
-                    ></img></div>
+                    <div data-aos="flip-left">
+                        <img
+                            // fluid="true"
+                            src={PoolImage}
+                            alt="Granite Spa Inground Pool"
+                            width="100%"
+                            height="100%"
+                        ></img></div>
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR text-center">
                     <br></br>
@@ -47,31 +48,31 @@ function LandingPage() {
 
                 </MDBCol>
                 <MDBCol lg="6" fluid="true" className="text-center">
-                <div data-aos="flip-left">
-                    <img
-                        // fluid="true"
-                        src={PoolImage2}
-                        alt="Gazebo Pool"
-                        width="100%"
-                        height="100%"
-                    ></img></div>
+                    <div data-aos="flip-left">
+                        <img
+                            // fluid="true"
+                            src={PoolImage2}
+                            alt="Gazebo Pool"
+                            width="100%"
+                            height="100%"
+                        ></img></div>
                 </MDBCol>
             </MDBRow>
             <MDBRow>
                 <MDBCol lg="6" className="text-center">
-                <div data-aos="flip-left">
-                    <img
-                        // fluid="true"
-                        src={PoolImage3}
-                        alt="Wading Pool"
-                        width="100%"
-                        height="100%"
-                        padding-top="10"
-                    ></img></div>
+                    <div data-aos="flip-left">
+                        <img
+                            // fluid="true"
+                            src={PoolImage3}
+                            alt="Wading Pool"
+                            width="100%"
+                            height="100%"
+                            padding-top="10"
+                        ></img></div>
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR">
                     <ul>
-                        
+
                         <h3>Weekly service includes</h3>
 
                         <li><h5>Brushing walls and steps</h5></li>
@@ -91,7 +92,7 @@ function LandingPage() {
                     <br></br>
                     <br></br>
                     <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
-              
+
                 </MDBCol>
             </MDBRow>
         </>

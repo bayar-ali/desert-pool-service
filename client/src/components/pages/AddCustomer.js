@@ -89,7 +89,7 @@ function AddCustomer() {
             <MDBRow>
 
                 <MDBCol lg="12">
-                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} nonEditable={false} />}
+                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} nonEditable={false} />
                 </MDBCol>
             </MDBRow>
             <MDBRow>

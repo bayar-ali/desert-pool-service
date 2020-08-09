@@ -6,9 +6,7 @@ var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
 require('dotenv').config()
 
-//For test
-// const Customers = mongoose.model("Customers")
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || '8080';
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -38,25 +36,25 @@ app.listen(PORT, function () {
 });
 var request = require("request");
 
-var options = {
-  method: 'POST',
-  url: 'https://dev-4anh9rsd.us.auth0.com/dbconnections/signup',
-  headers: { 'content-type': 'application/json' },
-  body: {
-    client_id: 'YOUR_CLIENT_ID',
-    email: '$(\'#signup-email\').val()',
-    password: '$(\'#signup-password\').val()',
-    connection: 'Username-Password-Authentication',
-    name: '$(\'#name\').val()',
-    user_metadata: { color: 'deepskyblue' }
-  },
-  json: true
-};
+// var options = {
+//   method: 'POST',
+//   url: 'https://dev-4anh9rsd.us.auth0.com/dbconnections/signup',
+//   headers: { 'content-type': 'application/json' },
+//   body: {
+//     client_id: 'YOUR_CLIENT_ID',
+//     email: '$(\'#signup-email\').val()',
+//     password: '$(\'#signup-password\').val()',
+//     connection: 'Username-Password-Authentication',
+//     name: '$(\'#name\').val()',
+//     user_metadata: { color: 'deepskyblue' }
+//   },
+//   json: true
+// };
 
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
+// request(options, function (error, response, body) {
+//   if (error) throw new Error(error);
 
-  console.log(body);
-});
+//   console.log(body);
+// });
 
 module.exports = app;
