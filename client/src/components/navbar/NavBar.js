@@ -12,6 +12,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const NavbarRx = () => {
     const { isAuthenticated } = useAuth0();
+
     return (
         <Navbar className="navbar" responisve="true" expand="lg">
             <NavLink to="/"><Navbar.Brand><span className="navbar-title">
@@ -31,8 +32,7 @@ const NavbarRx = () => {
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                <LoginButton />
-                <LogoutButton/> 
+                {isAuthenticated ? <LogoutButton /> : <LoginButton />}
             </Navbar.Collapse>
         </Navbar>
     );
