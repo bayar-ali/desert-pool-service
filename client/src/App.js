@@ -31,7 +31,6 @@ class App extends Component {
             <Route exact path="/addcustomer" component={AddCustomer} />
             <Route component={NoMatch} />
           </Switch>
-          <Footer />
         </Router>
     );
   };
