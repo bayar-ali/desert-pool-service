@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Customer.css";
 import ResultsList from "../resultslist/ResultsList"
 import API from "../../utils/API"
-// import Checkbox from "@material/react-checkbox"
-
 
 function Customer(props) {
 
@@ -34,11 +32,10 @@ function Customer(props) {
                         zipcode: response.data[i].address.zipcode,
                         phone: response.data[i].phone_num,
                         email: response.data[i].email,
-                        
+
                     }
                     customerRecords.push(customer)
                     console.log("This is customer records ", customerRecords)
-
                 }
                 setResult(customerRecords);
             })

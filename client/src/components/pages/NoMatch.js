@@ -7,16 +7,16 @@ function NoMatch() {
     <MDBContainer fluid>
       <MDBRow>
         <MDBCol lg="12" className="colFormat">
-        <MDBJumbotron >
+          <MDBJumbotron >
 
-          <h1>404 Page Not Found</h1>
-          <h1>
-            <span role="img" aria-label="Face With Rolling Eyes Emoji">
-              🙄
+            <h1>404 Page Not Found</h1>
+            <h1>
+              <span role="img" aria-label="Face With Rolling Eyes Emoji">
+                🙄
               </span>
-          </h1>
+            </h1>
 
-        </MDBJumbotron>
+          </MDBJumbotron>
         </MDBCol>
       </MDBRow>
     </MDBContainer>

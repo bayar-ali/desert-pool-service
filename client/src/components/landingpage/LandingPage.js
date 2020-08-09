@@ -1,7 +1,4 @@
 import React from "react";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
 import PoolImage from "../../assets/images/gunite-spa-inground-pool.jpg";
 import PoolImage2 from "../../assets/images/GazeboPool.jpg";
 import PoolImage3 from "../../assets/images/WadingPool.jpg";
@@ -14,13 +11,11 @@ AOS.init();
 
 function LandingPage() {
     return (
-
         <>
             <MDBRow>
                 <MDBCol lg="6" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        // fluid="true"
                         src={PoolImage}
                         alt="Granite Spa Inground Pool"
                         width="100%"
@@ -49,7 +44,6 @@ function LandingPage() {
                 <MDBCol lg="6" fluid="true" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        // fluid="true"
                         src={PoolImage2}
                         alt="Gazebo Pool"
                         width="100%"
@@ -61,7 +55,6 @@ function LandingPage() {
                 <MDBCol lg="6" className="text-center">
                 <div data-aos="flip-left">
                     <img
-                        // fluid="true"
                         src={PoolImage3}
                         alt="Wading Pool"
                         width="100%"
@@ -95,8 +88,6 @@ function LandingPage() {
                 </MDBCol>
             </MDBRow>
         </>
-
-
     )
 };
 

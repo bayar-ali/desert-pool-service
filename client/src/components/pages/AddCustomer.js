@@ -10,33 +10,17 @@ function AddCustomer() {
     let [result, setResult] = useState(
         {
             firstName: "",
-            lastName: "", city: "",
+            lastName: "",
+            city: "",
             state: "",
             zip: "",
             phone_num: "",
             email: ""
         })
-    // const [formObject, setFormObject] = useState({})
-    // useEffect(() => {
-    //     loadCustomer()
-    // }, [])
+
     function handleInputChange(event) {
         const { name, value } = event.target;
         setResult({ ...result, [name]: value })
-    };
-
-    //   const handlePush = () => {
-    //     setEditable(false);
-    // }
-    function clearFields() {
-        // result.firstName="",
-        // result.lastName="",
-        // result.street="",
-        // result.city="",
-        // result.state="",
-        // result.zipcode="",
-        // result.phone_num="",
-        // result.email=""
     };
 
     function handleAdd() {
@@ -58,29 +42,10 @@ function AddCustomer() {
             }
         })
             .then(response => {
-                clearFields();
                 alert("Customer added.");
             })
             .catch(error => console.log(error))
     };
-
-    // function addCustomer() {
-    //     API.addCustomer({
-    //         firstName: result.firstName,
-    //         lastName: result.lastName,
-    //         address: {
-    //             street: result.street,
-    //             city: result.city,
-    //             state: result.state,
-    //             zip: result.zip
-    //         },
-    //         phone_num: result.phone,
-    //         email: result.email
-    //     })
-    //         .then(response => clearFields())
-    //         .catch(error => console.log(error));
-    //     // setResult( customerRecord );
-    // };
 
     return (
         <>
@@ -89,7 +54,7 @@ function AddCustomer() {
             <MDBRow>
 
                 <MDBCol lg="12">
-                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} nonEditable={false} />}
+                    <CustomerCard CustomerRecord={result} handleChange={handleInputChange} nonEditable={false} />
                 </MDBCol>
             </MDBRow>
             <MDBRow>

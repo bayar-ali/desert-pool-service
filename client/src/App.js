@@ -27,12 +27,10 @@ class App extends Component {
           <Switch>
           <Route exact path="/" component={LandingPage} />
             <Route exact path="/customer" component={Customer} />
-            {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
             <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
             <Route exact path="/addcustomer" component={AddCustomer} />
             <Route component={NoMatch} />
           </Switch>
-          {/* <Footer /> */}
         </Router>
     );
   };

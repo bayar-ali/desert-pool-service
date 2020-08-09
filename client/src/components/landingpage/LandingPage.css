@@ -1,12 +1,9 @@
-
-
 body {
         background: url(../../assets/images/gunite-spa-inground-pool.jpg) no-repeat center center fixed;
         background-color: rgb(223, 193, 193);
         height: 120vh;
         background-size: cover;
-        background-repeat: no-repeat;
-      
+        background-repeat: no-repeat;   
 }
 
 .text-center, h3 {
@@ -34,7 +31,6 @@ li {
 .imageBKGR {
         background: url(../../assets/images/poolwater.jpeg) no-repeat center center fixed;
         background-color: rgb(223, 193, 193);
-        /* height: 120vh; */
         background-size: cover;
         background-repeat: no-repeat;
 }
@@ -43,5 +39,4 @@ li {
     text-align: center;    
     height: 13vh;
     color: darkblue!important;
-
 }

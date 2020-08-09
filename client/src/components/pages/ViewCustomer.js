@@ -14,14 +14,12 @@ function ViewCustomer(props) {
 
     let [result, setResult] = useState({})
     let [nonEditable, setNonEditable] = useState(true)
-    // let [customerData, setCustomerData] = useState({})
 
     useEffect(() => {
         loadCustomer()
     }, [])
 
     const handleChange = (event) => {
-        // event.preventDefault();
         const { name, value } = event.target;
         setResult({ ...result, [name]: value });
     }
@@ -47,7 +45,6 @@ function ViewCustomer(props) {
                     filter: "",
                     next_date_of_service: ""
                 });
-
             })
     }
 
@@ -106,26 +103,17 @@ function ViewCustomer(props) {
 
             <MDBRow>
                 <MDBCol lg="4" responsive="true">
-                    {/* <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: 420 }}>
-                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0"
-                            style={{ border: 0 }} allowFullScreen title="Customer Map"></iframe>
-                    </div> */}
-
                     <Card className="formatCard card-cascade narrower">
                         <Card.Title className="formatTitle view view-cascade gradient-card-header blue-gradient">
                             <h2 className="mb-0">Regular map</h2>
                         </Card.Title>
                         <Card.Body className="card-body-cascade text-center">
                             <GoogleApiWrapper customer={result} id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
-                                {/* <iframe src="https://maps.google.com/maps?q=Barcelona&t=&z=13&ie=UTF8&iwloc=&output=embed" */}
-                                {/* frameborder="0" style={{ border: 0 }} allowfullscreen></iframe> */}
                             </GoogleApiWrapper>
                         </Card.Body>
                     </Card>
-
                 </MDBCol>
                 <MDBCol lg="8">
-
                     <CustomerCard CustomerRecord={result} handleChange={handleChange} nonEditable={nonEditable} />
                     {nonEditable ? <button
                         className="formatButton"
@@ -139,13 +127,6 @@ function ViewCustomer(props) {
                         className="formatButton"
                         onClick={handleDelete}
                     >Delete Customer</button>
-                </MDBCol>
-
-            </MDBRow>
-            <MDBRow>
-
-                <MDBCol>
-
                 </MDBCol>
             </MDBRow>
         </>
