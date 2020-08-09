@@ -43,6 +43,19 @@ function AddCustomer() {
         })
             .then(response => {
                 alert("Customer added.");
+                setResult({
+                    firstName: "",
+                    lastName: "",
+                    street: "",
+                    city: "",
+                    state: "",
+                    zipcode: "",
+                    phone_num: "",
+                    email: "",
+                    salt_pool: "",
+                    filter: "",
+                    next_date_of_service: ""
+                });
             })
             .catch(error => console.log(error))
     };
