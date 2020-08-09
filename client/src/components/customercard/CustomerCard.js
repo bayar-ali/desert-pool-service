@@ -175,7 +175,7 @@ function CustomerCard({ CustomerRecord, handleChange, nonEditable }) {
                             onChange={handleChange}
                             disabled={nonEditable}
                             default=""
-                            >
+                        >
                             <option value="">Select Filter Type</option>
                             <option value="cartridge">Cartridge</option>
                             <option value="DE">DE</option>

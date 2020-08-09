@@ -8,7 +8,7 @@ const LogoutButton = () => {
 
     return (
         <Button
-        className="formatButton"
+            className="formatButton"
             variant="outline-light"
             type="submit"
             style={{ width: '10%' }}

@@ -53,13 +53,10 @@ const ResultsList = (props) => {
                 sort: 'asc'
             }
         ],
-        rows: props.customerData
-    
+        rows: props.customerData   
 };
 
     return (
-
-
         <MDBCard narrow responsive>
             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3">
                 <div>
@@ -75,9 +72,6 @@ const ResultsList = (props) => {
                 </div>
             </MDBCardHeader>
             <MDBCardBody cascade alignTable>
-                {/* <MDBTable btn fixed responsive small striped entriesOptions={[5, 20, 25]} entries={5} alignTable> */}
-                {/* <MDBTableHead columns={customerData.columns} /> */}
-                {/* <MDBTableBody rows={props.customerData} /> */}
                 <MDBDataTable className="formatTable"
                     striped
                     bordered
