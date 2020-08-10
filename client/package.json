@@ -4,6 +4,7 @@
   "description": "Mern Demo",
   "private": true,
   "proxy": "http://localhost:3001/",
+  "secure": false,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
     "@testing-library/jest-dom": "^5.11.2",
@@ -19,10 +20,12 @@
     "react-scripts": "^2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "browserslist": [
     ">0.2%",
