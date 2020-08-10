@@ -35,7 +35,10 @@
   ],
   "devDependencies": {
     "@testing-library/react": "^10.4.8",
-    "react-test-render": "^1.1.2"
+    "enzyme": "^3.11.0",
+    "jest": "^26.2.2",
+    "react-test-render": "^1.1.2",
+    "react-test-renderer": "^16.13.1"
   },
   "resolutions": {
     "babel-jest": "23.6.0"
