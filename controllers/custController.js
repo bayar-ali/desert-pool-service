@@ -30,11 +30,17 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  update: function (req, res) {
+  update: async (req, res) => {
     console.log("ID = ", req.params.id)
     console.log("Body = ", req.body)
     //TODO: Update Lat, lng if address changes.
-    db.Customers
+    const mapData = await axios
+      .get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address.street}&key=${process.env.GOOGLE_API_KEY}`);
+    const coords = mapData.data.results[0].geometry.location;
+    const user = { ...req.body, coords };
+    console.log(user);
+
+    return db.Customers
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
