@@ -41,7 +41,7 @@ module.exports = {
     console.log(user);
 
     return db.Customers
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ _id: req.params.id }, user)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
