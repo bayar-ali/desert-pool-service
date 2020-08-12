@@ -1,3 +1,3 @@
 module.exports = {
-  Customers: require("./Customers"),
+  Customers: require("./customers"),
 };
