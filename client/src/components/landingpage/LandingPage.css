@@ -11,6 +11,7 @@ body {
         color: darkblue;
         padding-right: 15px;
         padding-left: 0px;
+
 }
 
 h1, h4, h3, .H5fontFormat {
@@ -38,5 +39,6 @@ li {
 .footer {
     text-align: center;    
     height: 13vh;
-    color: darkblue!important;
+    
+    background-image: url(../../assets/images/poolwater.jpeg);
 }

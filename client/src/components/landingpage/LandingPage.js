@@ -76,7 +76,7 @@ function LandingPage() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <br></br>
+
                     <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
               
                 </MDBCol>
