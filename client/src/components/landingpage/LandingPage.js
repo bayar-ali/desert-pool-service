@@ -13,8 +13,8 @@ function LandingPage() {
     return (
         <>
             <MDBRow>
-                <MDBCol lg="6" className="text-center">
-                <div data-aos="flip-left">
+                <MDBCol lg="6" className="text-center formatPic">
+                <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600"> 
                     <img
                         src={PoolImage}
                         alt="Granite Spa Inground Pool"
@@ -42,7 +42,7 @@ function LandingPage() {
 
                 </MDBCol>
                 <MDBCol lg="6" fluid="true" className="text-center">
-                <div data-aos="flip-left">
+                <div data-aos="zoom-in-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
                     <img
                         src={PoolImage2}
                         alt="Gazebo Pool"
@@ -52,8 +52,8 @@ function LandingPage() {
                 </MDBCol>
             </MDBRow>
             <MDBRow>
-                <MDBCol lg="6" className="text-center">
-                <div data-aos="flip-left">
+                <MDBCol lg="6" className="text-center formatPic">
+                <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
                     <img
                         src={PoolImage3}
                         alt="Wading Pool"
