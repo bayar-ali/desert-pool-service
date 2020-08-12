@@ -40,3 +40,7 @@ li {
     height: 13vh;
     color: darkblue!important;
 }
+
+.formatPic {
+    padding-right: 0px;
+}
