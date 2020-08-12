@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Mern Demo",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:5000/",
+  "secure": false,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
     "@testing-library/jest-dom": "^5.11.2",
@@ -19,12 +20,12 @@
     "react-scripts": "^2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -33,7 +34,10 @@
   ],
   "devDependencies": {
     "@testing-library/react": "^10.4.8",
-    "react-test-render": "^1.1.2"
+    "enzyme": "^3.11.0",
+    "jest": "^26.2.2",
+    "react-test-render": "^1.1.2",
+    "react-test-renderer": "^16.13.1"
   },
   "resolutions": {
     "babel-jest": "23.6.0"

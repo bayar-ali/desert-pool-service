@@ -8,11 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PoolServiceLogo from "../../assets/images/Swimming-pool-service-aqua-logo-580x348.jpg";
 import LoginButton from "../loginButton/loginButton";
 import LogoutButton from "../logoutButton/logoutButton";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 const NavbarRx = () => {
-    const { isAuthenticated } = useAuth0();
-
+    // const { isAuthenticated } = useAuth0();
+    
     return (
         <Navbar className="navbar" responisve="true" expand="lg">
             <NavLink to="/"><Navbar.Brand><span className="navbar-title">
@@ -32,7 +32,8 @@ const NavbarRx = () => {
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+             <LoginButton /> 
+             <LogoutButton />
             </Navbar.Collapse>
         </Navbar>
     );

@@ -6,9 +6,7 @@ var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
 require('dotenv').config()
 
-//For test
-// const Customers = mongoose.model("Customers")
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || '8080';
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -17,6 +15,9 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 // Add routes, both API and view
 app.use(routes);
 

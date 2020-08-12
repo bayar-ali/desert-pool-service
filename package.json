@@ -11,7 +11,7 @@
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -34,7 +34,8 @@
     "express-jwt-authz": "^2.4.1",
     "if-env": "^1.0.4",
     "jwks-rsa": "^1.8.1",
-    "mongoose": "^5.9.27"
+    "mongoose": "^5.9.28",
+    "serve": "^11.3.2"
   },
   "resolutions": {
     "babel-jest": "23.6.0"
