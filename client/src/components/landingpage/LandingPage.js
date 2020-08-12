@@ -13,7 +13,7 @@ function LandingPage() {
     return (
         <>
             <MDBRow>
-                <MDBCol lg="6" className="text-center">
+                <MDBCol lg="12" className="text-center">
                 <div data-aos="flip-left">
                     <img
                         src={PoolImage}
@@ -22,15 +22,9 @@ function LandingPage() {
                         height="100%"
                     ></img></div>
                 </MDBCol>
-                <MDBCol lg="6" className="imageBKGR text-center">
-                    <br></br>
-                    <h2>Your Local pool professional</h2>
-                    <h4>We enjoy what we do so you can enjoy your pool!</h4>
-                    <h5 className="H5fontFormat">Desert Pool Service is the premier Gilbert pool repair service company. We maintain reasonable prices and spend the necessary time making sure we get the job done the first time around.
-
-                    If you've been delaying much-needed repairs or service for your swimming pool, look no further than Desert Pool Service. As an established service and repair company in Gilbert, our goal is to provide you with quality products and services at affordable prices.</h5>
-                </MDBCol>
+               
             </MDBRow>
+            
             <MDBRow>
                 <MDBCol lg="6" className="imageBKGR">
 
