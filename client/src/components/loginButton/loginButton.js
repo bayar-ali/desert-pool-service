@@ -8,7 +8,7 @@ const LoginButton = () => {
 
     return (
         <Button
-            className="formatButton"
+            className="btn-one"
             data-testid="logButton"
             variant="outline-light"
             type="submit"
