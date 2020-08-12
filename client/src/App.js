@@ -1,6 +1,6 @@
 
 // components js files imported
-import React, { Component } from "react";
+import React from "react";
 import NavBar from "./components/navbar/NavBar";
 import LandingPage from "./components/landingpage/LandingPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -13,27 +13,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
-class App extends Component {
-
+function App() {
+  
   // Setting this.state.customers to the cutomers db
   // state = {
   //   customers
   // };
 
-  render() {
-    return ( 
-        <Router basename={process.env.PUBLIC_URL}>
-        <NavBar />
-          <Switch>
-          <Route exact path="/" component={LandingPage} />
-            <Route exact path="/customer" component={Customer} />
-            <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
-            <Route exact path="/addcustomer" component={AddCustomer} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
-    );
-  };
+  return (
+    <Router basename={process.env.PUBLIC_URL}>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/customer" component={Customer} />
+        {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
+        <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
+        <Route exact path="/addcustomer" component={AddCustomer} />
+        <Route component={NoMatch} />
+      </Switch>
+      {/* <Footer /> */}
+    </Router>
+  );
 };
 
 export default App;
