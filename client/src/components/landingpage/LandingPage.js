@@ -14,15 +14,14 @@ function LandingPage() {
     return (
         <>
             <MDBRow>
-                <MDBCol lg="6" className="text-center">
-                    <div data-aos="flip-left">
-                        <img
-                            // fluid="true"
-                            src={PoolImage}
-                            alt="Granite Spa Inground Pool"
-                            width="100%"
-                            height="100%"
-                        ></img></div>
+                <MDBCol lg="6" className="text-center formatPic">
+                <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600"> 
+                    <img
+                        src={PoolImage}
+                        alt="Granite Spa Inground Pool"
+                        width="100%"
+                        height="100%"
+                    ></img></div>
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR text-center">
                     <br></br>
@@ -44,27 +43,25 @@ function LandingPage() {
 
                 </MDBCol>
                 <MDBCol lg="6" fluid="true" className="text-center">
-                    <div data-aos="flip-left">
-                        <img
-                            // fluid="true"
-                            src={PoolImage2}
-                            alt="Gazebo Pool"
-                            width="100%"
-                            height="100%"
-                        ></img></div>
+                <div data-aos="zoom-in-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
+                    <img
+                        src={PoolImage2}
+                        alt="Gazebo Pool"
+                        width="100%"
+                        height="100%"
+                    ></img></div>
                 </MDBCol>
             </MDBRow>
             <MDBRow>
-                <MDBCol lg="6" className="text-center">
-                    <div data-aos="flip-left">
-                        <img
-                            // fluid="true"
-                            src={PoolImage3}
-                            alt="Wading Pool"
-                            width="100%"
-                            height="100%"
-                            padding-top="10"
-                        ></img></div>
+                <MDBCol lg="6" className="text-center formatPic">
+                <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
+                    <img
+                        src={PoolImage3}
+                        alt="Wading Pool"
+                        width="100%"
+                        height="100%"
+                        padding-top="10"
+                    ></img></div>
                 </MDBCol>
                 <MDBCol lg="6" className="imageBKGR">
                     <ul>
