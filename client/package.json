@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Mern Demo",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:3001/",
   "secure": false,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
@@ -20,8 +20,7 @@
     "react-scripts": "^2.1.1"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
