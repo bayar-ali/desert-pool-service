@@ -27,10 +27,10 @@ const NavbarRx = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
-                    <NavDropdown className="navBar-font" title="Accounts" id="basic-nav-dropdown">
+                {isAuthenticated ? <NavDropdown className="navBar-font" title="Accounts" id="basic-nav-dropdown">
                         <NavDropdown.Item className="navBar-font" href="/customer">Customer</NavDropdown.Item>
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> : null}
                 </Nav>
              <LoginButton /> 
              <LogoutButton />
