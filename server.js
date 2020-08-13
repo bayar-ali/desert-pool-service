@@ -2,8 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-var jwt = require('express-jwt');
-var jwks = require('jwks-rsa');
 require('dotenv').config()
 
 const PORT = process.env.PORT || '3001';
