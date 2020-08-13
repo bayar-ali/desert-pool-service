@@ -3,7 +3,6 @@ import PoolImage from "../../assets/images/gunite-spa-inground-pool.jpg";
 import PoolImage2 from "../../assets/images/GazeboPool.jpg";
 import PoolImage3 from "../../assets/images/WadingPool.jpg";
 import { MDBRow, MDBCol } from 'mdbreact';
-import ViewCustomer from "../pages/ViewCustomer";
 import "./LandingPage.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles

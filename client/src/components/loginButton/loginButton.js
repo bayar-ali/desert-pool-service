@@ -10,7 +10,6 @@ const LoginButton = () => {
         <Button
             data-testid="login-button"
             className="formatButton"
-            data-testid="logButton"
             variant="outline-light"
             type="submit"
             style={{ width: '10%' }}

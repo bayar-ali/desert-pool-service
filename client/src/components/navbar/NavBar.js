@@ -32,8 +32,9 @@ const NavbarRx = () => {
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                     </NavDropdown> : null}
                 </Nav>
-             <LoginButton /> 
-             <LogoutButton />
+                {isAuthenticated ? <LogoutButton/>: <LoginButton/> }
+            {/* //  <LoginButton /> 
+            //  <LogoutButton />  */}
             </Navbar.Collapse>
         </Navbar>
     );
