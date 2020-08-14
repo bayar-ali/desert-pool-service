@@ -1,47 +1,65 @@
 body {
-        background: url(../../assets/images/gunite-spa-inground-pool.jpg) no-repeat center center fixed;
-        background-color: rgb(223, 193, 193);
-        height: 120vh;
-        background-size: cover;
-        background-repeat: no-repeat;   
+  background: url(../../assets/images/GazeboPool.jpg) no-repeat center center
+    fixed;
+  height: 120vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.text-center, h3 {
-        text-align: center;
-        color: darkblue;
-        padding-right: 15px;
-        padding-left: 0px;
+.text-center,
+h3 {
+  text-align: center;
+  color: darkblue;
+  padding-right: 15px;
+  padding-left: 0px;
 }
 
-h1, h4, h3, .H5fontFormat {
-        padding: 10px;
-        color: darkblue;
+h1,
+h4,
+h3,
+.H5fontFormat {
+  padding: 10px;
+  color: darkblue;
 }
 
-h3, h4, h2 {
-        font-weight: bold;
+h3,
+h4,
+h2 {
+  font-weight: bold;
 }
 
 li {
-        padding: 10px;
-        color: darkblue;
-        font-size: large;
+  padding: 10px;
+  color: darkblue;
+  font-size: large;
 }
 
 .imageBKGR {
-        background: url(../../assets/images/poolwater.jpeg) no-repeat center center fixed;
-        background-color: rgb(223, 193, 193);
-        background-size: cover;
-        background-repeat: no-repeat;
+  background: url(../../assets/images/poolwater.jpeg) no-repeat center center
+    fixed;
+  background-color: rgb(223, 193, 193);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer {
-    text-align: center;    
-    height: 13vh;
-    color: darkblue!important;
-    background: url(../../assets/images/poolwater.jpeg)
+  text-align: center;
+  height: 13vh;
+  background: url(../../assets/images/poolwater.jpeg);
 }
 
 .formatPic {
-    padding-right: 0px;
+  padding-right: 0px;
+}
+
+.section1 {
+  height: 65vh;
+}
+
+.poolservice {
+  font-size: 27px;
+  color: rgb(12, 3, 3);
+  font-weight: 500;
+  font-family: "Courgette", cursive;
+  font-family: "Kalam", cursive;
 }
