@@ -2,6 +2,7 @@ import React from "react";
 import PoolImage from "../../assets/images/gunite-spa-inground-pool.jpg";
 import PoolImage2 from "../../assets/images/GazeboPool.jpg";
 import PoolImage3 from "../../assets/images/WadingPool.jpg";
+import PoolImage4 from "../../assets/images/swiming pool.jpg";
 import { MDBRow, MDBCol } from 'mdbreact';
 import "./LandingPage.css";
 import AOS from 'aos';
@@ -25,6 +26,26 @@ function LandingPage() {
                
             </MDBRow>
             <MDBRow>
+            <MDBCol lg="6" fluid="true" className="text-center">
+                <div data-aos="zoom-in-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
+                    <img
+                        src={PoolImage2}
+                        alt="Gazebo Pool"
+                        width="100%"
+                        height="100%"
+                    ></img></div>
+                </MDBCol>
+            
+                <MDBCol lg="6" className="imageBKGR text-center">
+                    <br></br>
+                    <h2>Your Local pool professional</h2>
+                    <h4>We enjoy what we do so you can enjoy your pool!</h4>
+                    <h5 className="H5fontFormat">Desert Pool Service is the premier Gilbert pool repair service company. We maintain reasonable prices and spend the necessary time making sure we get the job done the first time around.
+                    If you've been delaying much-needed repairs or service for your swimming pool, look no further than Desert Pool Service. As an established service and repair company in Gilbert, our goal is to provide you with quality products and services at affordable prices.</h5>
+                </MDBCol>
+            </MDBRow>
+
+            <MDBRow>
                 <MDBCol lg="6" className="imageBKGR">
 
                     <h3>Chemicals</h3>
@@ -34,15 +55,17 @@ function LandingPage() {
                     </ul>
 
                 </MDBCol>
-                <MDBCol lg="6" fluid="true" className="text-center">
-                <div data-aos="zoom-in-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
+                <MDBCol lg="6" className="text-center formatPic">
+                <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600">
                     <img
-                        src={PoolImage2}
-                        alt="Gazebo Pool"
+                        src={PoolImage4}
+                        alt="Wading Pool"
                         width="100%"
                         height="100%"
+                        padding-top="10"
                     ></img></div>
                 </MDBCol>
+                
             </MDBRow>
             <MDBRow>
                 <MDBCol lg="6" className="text-center formatPic">
@@ -74,7 +97,7 @@ function LandingPage() {
                 <MDBCol lg="12" className="footer">
                     <br></br>
                     <br></br>
-                    <br></br>
+                    
                     
                     <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
 
@@ -86,3 +109,4 @@ function LandingPage() {
 
 
 export default LandingPage; 
+
