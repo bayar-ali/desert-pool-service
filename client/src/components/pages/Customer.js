@@ -31,7 +31,7 @@ function Customer(props) {
                         state: response.data[i].address.state,
                         zipcode: response.data[i].address.zipcode,
                         phone: response.data[i].phone_num,
-                        email: response.data[i].email,
+                        email: response.data[i].email
 
                     }
                     customerRecords.push(customer)
