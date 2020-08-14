@@ -9,7 +9,6 @@ import PoolServiceLogo from "../../assets/images/Swimming-pool-service-aqua-logo
 import LoginButton from "../loginButton/loginButton";
 import LogoutButton from "../logoutButton/logoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
-import { MDBRow, MDBCol } from 'mdbreact';
 
 const NavbarRx = () => {
     const { isAuthenticated } = useAuth0();
@@ -33,14 +32,8 @@ const NavbarRx = () => {
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                     </NavDropdown> : null}
                 </Nav>
-              
-            {/* //  <LoginButton /> 
-            //  <LogoutButton />  */}
-
-
             </Navbar.Collapse>
             {isAuthenticated ? <LogoutButton/>: <LoginButton/> }
-
         </Navbar>
         
     );
