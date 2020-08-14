@@ -28,7 +28,7 @@ const NavbarRx = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
                 {isAuthenticated ? <NavDropdown className="navBar-font" title="Accounts" id="basic-nav-dropdown">
-                        <NavDropdown.Item className="navBar-font" href="/customer">Customer</NavDropdown.Item>
+                        <NavDropdown.Item className="navBar-font" href="/customers">Customer</NavDropdown.Item>
                         <NavDropdown.Item className="navBar-font" href="/addcustomer">Add Customer</NavDropdown.Item>
                     </NavDropdown> : null}
                 </Nav>
