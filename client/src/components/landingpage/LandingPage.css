@@ -39,6 +39,7 @@ li {
     text-align: center;    
     height: 13vh;
     color: darkblue!important;
+    background: url(../../assets/images/poolwater.jpeg)
 }
 
 .formatPic {
