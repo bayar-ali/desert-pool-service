@@ -6,21 +6,25 @@ body {
   background-repeat: no-repeat;
 }
 
-.text-center,
-h3 {
+.text-center, h3 {
   text-align: center;
   color: darkblue;
   padding-right: 15px;
   padding-left: 0px;
 }
 
-h1,
-h4,
-h3,
-.H5fontFormat {
-  padding: 10px;
+h1, h4, h3, .H6FontFormat{
+  padding-left: 50px;
+  padding-right: 25px;
+} 
+
+h5, h6 {
   color: darkblue;
 }
+
+/* h1{
+  color: white;
+} */
 
 h3,
 h4,
@@ -44,6 +48,7 @@ li {
 
 .footer {
   text-align: center;
+  padding: 0px;
   height: 13vh;
   background: url(../../assets/images/poolwater.jpeg);
 }
@@ -58,7 +63,8 @@ li {
 
 .poolservice {
   font-size: 27px;
-  color: rgb(12, 3, 3);
+  /* color: rgb(12, 3, 3); */
+  color: darkblue;
   font-weight: 500;
   font-family: "Courgette", cursive;
   font-family: "Kalam", cursive;

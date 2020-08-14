@@ -3,7 +3,7 @@ import PoolImage2 from "../../assets/images/1.jpg";
 import PoolImage3 from "../../assets/images/WadingPool.jpg";
 import PoolImage4 from "../../assets/images/a.jpg";
 import { Button } from "react-bootstrap";
-import { MDBRow, MDBCol } from "mdbreact";
+import { MDBRow, MDBCol, MDBFooter } from "mdbreact";
 import "./LandingPage.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -14,8 +14,8 @@ function LandingPage() {
   return (
     <>
       <MDBRow className="section1">
-        <MDBCol lg="2" className=""></MDBCol>
-        <MDBCol lg="5" className="">
+        <MDBCol md="2" className=""></MDBCol>
+        <MDBCol md="7" className="">
           <p>
             <br></br>
             <br></br>
@@ -25,33 +25,27 @@ function LandingPage() {
             <br></br>
             <br></br>
             <p className="poolservice">
-              Need weekly or seasonal service? Get a FREE Estimate Now!
+              <h1>Need weekly or seasonal service? Get a FREE Estimate Now!</h1>
             </p>
-            <Button
-            data-testid="login-button"
-            className="btn-one"
-            type="submit"
-            onClick='infobutton'
-            >More Info</Button>
-            
+            <a href="#moreInfo">
+              <Button
+                // data-testid="login-button"
+                className="btn-one"
+                type="submit"
+                onClick="infobutton"
+              >
+                More Info
+              </Button>
+            </a>
           </p>
         </MDBCol>
-        <MDBCol lg="3" className="">
+        {/* <MDBCol md="3" className="">
           <p></p>
-        </MDBCol>
-
-        <MDBCol lg="" className="">
-          {/* <div data-aos="zoom-in-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1600"> 
-                    <img
-                        src={PoolImage}
-                        alt="Granite Spa Inground Pool"
-                        width="100%"
-                        height="100%"
-                    ></img></div> */}
-        </MDBCol>
+        </MDBCol> */}
       </MDBRow>
       <MDBRow>
-        <MDBCol lg="6" fluid="true" className="text-center">
+        <MDBCol md="6" fluid="true" className="text-center formatPic">
+          <p id="moreInfo"></p>
           <div
             data-aos="zoom-in-left"
             data-aos-offset="200"
@@ -59,7 +53,8 @@ function LandingPage() {
             data-aos-duration="1600"
           >
             <img
-              src={PoolImage2}
+              fluid
+              src={PoolImage4}
               alt="Gazebo Pool"
               width="100%"
               height="100%"
@@ -67,11 +62,12 @@ function LandingPage() {
           </div>
         </MDBCol>
 
-        <MDBCol lg="6" className="imageBKGR text-center" id="#infobutton">
+        <MDBCol md="6" fluid="true" className="imageBKGR text-center" id="#infobutton">
           <br></br>
           <h2>Your Local pool professional</h2>
           <h4>We enjoy what we do so you can enjoy your pool!</h4>
-          <h5 className="H5fontFormat">
+          <br></br>
+          <h6 className="H6FontFormat">
             Desert Pool Service is the premier Gilbert pool repair service
             company. We maintain reasonable prices and spend the necessary time
             making sure we get the job done the first time around. If you've
@@ -79,22 +75,22 @@ function LandingPage() {
             look no further than Desert Pool Service. As an established service
             and repair company in Gilbert, our goal is to provide you with
             quality products and services at affordable prices.
-          </h5>
+          </h6>
         </MDBCol>
       </MDBRow>
 
       <MDBRow>
-        <MDBCol lg="6" className="imageBKGR">
+        <MDBCol md="6" className="imageBKGR">
           <h3>Chemicals</h3>
           <ul>
             <li>
-              <h5>
+              <h6>
                 We use the highest professional grade chemicals available each
                 week at every pool.
-              </h5>
+              </h6>
             </li>
             <li>
-              <h5>
+              <h6>
                 You've heard the phrase "one size fits all" most likely, but
                 unfortunately that's not always the case. That's especial true
                 when it comes to keeping water balanced and the amount of
@@ -104,19 +100,21 @@ function LandingPage() {
                 will be honest with how much it's going to cost, and take the
                 time to care for that body of water, it's equipment, and keep
                 your family safe?.
-              </h5>
+              </h6>
             </li>
           </ul>
         </MDBCol>
-        <MDBCol lg="6" className="text-center formatPic">
+        <MDBCol md="6" className="text-center formatPic">
           <div
+            fluid="true"
             data-aos="zoom-in-right"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="1600"
           >
             <img
-              src={PoolImage4}
+              fluid="true"
+              src={PoolImage3}
               alt="Wading Pool"
               width="100%"
               height="100%"
@@ -126,15 +124,16 @@ function LandingPage() {
         </MDBCol>
       </MDBRow>
       <MDBRow>
-        <MDBCol lg="6" className="text-center formatPic">
+        <MDBCol md="6" className="text-center formatPic">
           <div
-            data-aos="zoom-in-right"
+            data-aos="zoom-in-left"
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="1600"
           >
             <img
-              src={PoolImage3}
+              fluid="true"
+              src={PoolImage2}
               alt="Wading Pool"
               width="100%"
               height="100%"
@@ -142,7 +141,7 @@ function LandingPage() {
             ></img>
           </div>
         </MDBCol>
-        <MDBCol lg="6" className="imageBKGR">
+        <MDBCol md="6" className="imageBKGR">
           <ul>
             <h3>Weekly service includes</h3>
 
@@ -167,14 +166,19 @@ function LandingPage() {
             </li>
           </ul>
         </MDBCol>
-        <MDBCol lg="12" className="footer">
-          <br></br>
-          <br></br>
-          <br></br>
-
-          <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
-        </MDBCol>
       </MDBRow>
+
+      <MDBFooter className="footer">
+        <MDBRow>
+          <MDBCol lg="12" className="footer">
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <h5 className="footer"> @copyright 2020. All rights Reserved</h5>
+          </MDBCol>
+        </MDBRow>
+      </MDBFooter>
     </>
   );
 }

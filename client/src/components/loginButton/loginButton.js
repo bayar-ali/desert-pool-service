@@ -11,7 +11,7 @@ const LoginButton = () => {
             data-testid="login-button"
             className="btn-one"
             type="submit"
-            style={{ width: '10%' }}
+            // style={{ width: '25%' }}
             onClick={() => loginWithRedirect()}>Log In</Button>
     );
 };
