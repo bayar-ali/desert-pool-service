@@ -25,7 +25,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/customers" component={Customer} />
+        <Route exact path="/customer" component={Customer} />
         {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
         <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
         <Route exact path="/addcustomer" component={AddCustomer} />
