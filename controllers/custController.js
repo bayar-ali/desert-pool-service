@@ -28,7 +28,7 @@ module.exports = {
     return db.Customers
       .create(user)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => {console.log(err); return res.status(422).json(err)});
   },
   update: async (req, res) => {
     console.log("ID = ", req.params.id)

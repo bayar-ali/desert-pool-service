@@ -40,7 +40,7 @@ class GoogleMapsContainer extends React.Component {
       'marginLeft': 'auto',
       'marginRight': 'auto'
     }
-    console.log(this.props.customer);
+    console.log("maps ", this.props.customer);
     return (
       <Map
         item
@@ -50,6 +50,7 @@ class GoogleMapsContainer extends React.Component {
         onClick={this.onMapClick}
         zoom={14}
         initialCenter={this.props.customer.coords}
+        center={this.props.customer.coords}
       >
         <Marker
           onClick={this.onMarkerClick}
