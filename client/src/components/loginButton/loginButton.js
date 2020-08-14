@@ -9,8 +9,7 @@ const LoginButton = () => {
     return (
         <Button
             data-testid="login-button"
-            className="formatButton"
-            variant="outline-light"
+            className="btn-one"
             type="submit"
             style={{ width: '10%' }}
             onClick={() => loginWithRedirect()}>Log In</Button>
