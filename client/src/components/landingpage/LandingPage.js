@@ -130,7 +130,7 @@ function LandingPage() {
             <img
               fluid="true"
               src={PoolImage2}
-              alt="Wading Pool"
+              alt="Wading Pool Two"
               width="100%"
               height="100%"
               padding-top="10"
