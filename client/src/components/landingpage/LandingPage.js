@@ -6,8 +6,7 @@ import { Button } from "react-bootstrap";
 import { MDBRow, MDBCol, MDBFooter } from "mdbreact";
 import "./LandingPage.css";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css"; 
 AOS.init();
 
 function LandingPage() {
@@ -37,22 +36,8 @@ function LandingPage() {
                 More Info
               </Button>
             </a>
-            
-            {/* <a href="#services">
-              <Button
-                // data-testid="login-button"
-                className="btn-one"
-                type="submit"
-                onClick="infobutton"
-              >
-                Our Services
-              </Button>
-            </a> */}
           </p>
         </MDBCol>
-        {/* <MDBCol md="3" className="">
-          <p></p>
-        </MDBCol> */}
       </MDBRow>
       <MDBRow>
         <MDBCol md="6" fluid="true" className="text-center formatPic">
