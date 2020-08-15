@@ -40,7 +40,6 @@ class GoogleMapsContainer extends React.Component {
       'marginLeft': 'auto',
       'marginRight': 'auto'
     }
-    console.log("maps ", this.props.customer);
     return (
       <Map
         item
@@ -62,20 +61,6 @@ class GoogleMapsContainer extends React.Component {
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
         >
-          {/* <Paper>
-            <Typography
-              variant = 'headline'
-              component = 'h4'
-            >
-              Changing Colors Garage
-            </Typography>
-            <Typography
-              component = 'p'
-            >
-              98G Albe Dr Newark, DE 19702 <br />
-              302-293-8627
-            </Typography>
-          </Paper> */}
         </InfoWindow>
       </Map>
     );
