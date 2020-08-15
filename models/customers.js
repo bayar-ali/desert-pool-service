@@ -16,7 +16,7 @@ const custSchema = new Schema({
     street: String,
     city: String,
     state: { type: String, maxlength: 2 },
-    zipcode: { type: String, maxlength: 5 }
+    zipcode: { type: String }
   },
   phone_num: {
     type: { $type: String },
