@@ -11,7 +11,7 @@ describe('MDBCol', () => {
         // Confirming that the header is going to be present
         expect(screen.getByText('Your Local pool professional')).toBeInTheDocument();
         // Confirming images to also be pesent
-        expect(screen.getByAltText('Granite Spa Inground Pool')).toBeInTheDocument();
+        expect(screen.getByAltText('Wading Pool Two')).toBeInTheDocument();
         expect(screen.getByAltText('Gazebo Pool')).toBeInTheDocument();
         expect(screen.getByAltText('Wading Pool')).toBeInTheDocument();
     });
