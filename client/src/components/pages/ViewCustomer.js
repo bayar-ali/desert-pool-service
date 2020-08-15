@@ -10,8 +10,6 @@ import moment from "moment";
 
 
 function ViewCustomer(props) {
-    console.log(props.match.params.id)
-
     let [result, setResult] = useState({})
     let [nonEditable, setNonEditable] = useState(true)
 
@@ -49,8 +47,6 @@ function ViewCustomer(props) {
     }
 
     const handleSave = () => {
-        console.log("Filter ", result.filter)
-        console.log("Pool ", result.salt_pool)
         API.updateCustomer(props.match.params.id, {
             firstName: result.firstName,
             lastName: result.lastName,
@@ -78,7 +74,6 @@ function ViewCustomer(props) {
     function loadCustomer() {
         API.getCustomer(props.match.params.id)
             .then(response => {
-                console.log("Get Customer Info ", response);
                 const lastIndex = response.data.workOrders.length - 1;
                 setResult({
                     firstName: response.data.firstName,
@@ -94,7 +89,6 @@ function ViewCustomer(props) {
                     next_date_of_service: response.data.workOrders[lastIndex].next_date_of_service,
                     coords: response.data.coords
                 });
-                console.log(response.data);
             })
     }
     return (

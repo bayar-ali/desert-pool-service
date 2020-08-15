@@ -12,14 +12,12 @@ function Customer(props) {
     }, [])
 
     function handleSubmit(id) {
-        console.log("This is.id " + id);
         window.location.href = "/viewcustomer/" + id;
     }
 
     function loadCustomers() {
         API.getCustomers()
             .then(response => {
-                console.log(response);
                 let customerRecords = [];
                 for (let i = 0; i < response.data.length; i++) {
                     let customer = {
@@ -35,7 +33,6 @@ function Customer(props) {
 
                     }
                     customerRecords.push(customer)
-                    console.log("This is customer records ", customerRecords)
                 }
                 setResult(customerRecords);
             })

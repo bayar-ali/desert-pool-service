@@ -24,7 +24,6 @@ function AddCustomer() {
     };
 
     function handleAdd() {
-        console.log(moment(result.next_date_of_service).toISOString());
         API.addCustomer({
             firstName: result.firstName,
             lastName: result.lastName,
@@ -43,7 +42,6 @@ function AddCustomer() {
             }
         })
             .then(response => {
-                console.log(response);
                 alert("Customer added.");
                 setResult({
                     firstName: "",
