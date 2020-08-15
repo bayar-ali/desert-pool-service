@@ -15,7 +15,7 @@ function LandingPage() {
     <>
       <MDBRow className="section1">
         <MDBCol md="2" className=""></MDBCol>
-        <MDBCol md="7" className="">
+        <MDBCol md="8" className="">
           <p>
             <br></br>
             <br></br>
@@ -27,16 +27,27 @@ function LandingPage() {
             <p className="poolservice">
               <h1>Need weekly or seasonal service? Get a FREE Estimate Now!</h1>
             </p>
-            <a href="#moreInfo">
+            <a href="#moreInfo" className="learn-more">
               <Button
                 // data-testid="login-button"
-                className="btn-one"
+                className="moreinfo"
                 type="submit"
                 onClick="infobutton"
               >
                 More Info
               </Button>
             </a>
+            
+            {/* <a href="#services">
+              <Button
+                // data-testid="login-button"
+                className="btn-one"
+                type="submit"
+                onClick="infobutton"
+              >
+                Our Services
+              </Button>
+            </a> */}
           </p>
         </MDBCol>
         {/* <MDBCol md="3" className="">
@@ -81,6 +92,7 @@ function LandingPage() {
 
       <MDBRow>
         <MDBCol md="6" className="imageBKGR">
+        <p id="services"></p>
           <h3>Chemicals</h3>
           <ul>
             <li>
