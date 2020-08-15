@@ -105,15 +105,15 @@ function ViewCustomer(props) {
                 <MDBCol lg="4" responsive="true">
                     <Card className="formatCard card-cascade narrower">
                         <Card.Title className="formatTitle view view-cascade gradient-card-header blue-gradient">
-                            <h2 className="mb-0">Regular map</h2>
+                            <h2 className="mb-0">Customer Location</h2>
                         </Card.Title>
                         <Card.Body className="card-body-cascade text-center">
-                            <GoogleApiWrapper customer={result} id="map-container-google-8" className="z-depth-1-half map-container-5" style={{ height: 500 }}>
+                            <GoogleApiWrapper customer={result} id="map-container-google-8" className="z-depth-1-half map-container-5">
                             </GoogleApiWrapper>
                         </Card.Body>
                     </Card>
                 </MDBCol>
-                <MDBCol lg="8">
+                <MDBCol lg="8" responsive="true">
                     <CustomerCard CustomerRecord={result} handleChange={handleChange} nonEditable={nonEditable} />
                     {nonEditable ? <button
                         className="formatButton"
