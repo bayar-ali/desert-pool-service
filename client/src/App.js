@@ -14,11 +14,6 @@ import './App.css';
 
 
 function App() {
-  
-  // Setting this.state.customers to the cutomers db
-  // state = {
-  //   customers
-  // };
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
@@ -26,12 +21,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/customer" component={Customer} />
-        {/* <Route exact path="/customer" render={(props) => <Customer {...props} customers={this.state.customers} />} /> */}
         <Route exact path="/viewcustomer/:id" component={ViewCustomer} />
         <Route exact path="/addcustomer" component={AddCustomer} />
         <Route component={NoMatch} />
       </Switch>
-      {/* <Footer /> */}
     </Router>
   );
 };

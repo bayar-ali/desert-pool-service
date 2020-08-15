@@ -4,7 +4,6 @@ const axios = require("axios");
 // Defining methods for the custController
 module.exports = {
   findAll: function (req, res) {
-    console.log(req.query);
     db.Customers
       .find(req.query)
       .sort({ date: -1 })
@@ -18,12 +17,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: async (req, res) => {
-    console.log("Create req ", req.body)
     const mapData = await axios
       .get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address.street}&key=${process.env.GOOGLE_API_KEY}`);
     const coords = mapData.data.results[0].geometry.location;
     const user = { ...req.body, coords };
-    console.log(user);
 
     return db.Customers
       .create(user)
@@ -31,14 +28,11 @@ module.exports = {
       .catch(err => {console.log(err); return res.status(422).json(err)});
   },
   update: async (req, res) => {
-    console.log("ID = ", req.params.id)
-    console.log("Body = ", req.body)
     //TODO: Update Lat, lng if address changes.
     const mapData = await axios
       .get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address.street}&key=${process.env.GOOGLE_API_KEY}`);
     const coords = mapData.data.results[0].geometry.location;
     const user = { ...req.body, coords };
-    console.log(user);
 
     return db.Customers
       .findOneAndUpdate({ _id: req.params.id }, user)

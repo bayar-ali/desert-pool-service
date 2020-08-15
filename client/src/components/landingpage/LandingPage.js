@@ -29,7 +29,6 @@ function LandingPage() {
             </p>
             <a href="#moreInfo" className="learn-more">
               <Button
-                // data-testid="login-button"
                 className="moreinfo"
                 type="submit"
                 onClick="infobutton"
@@ -37,22 +36,8 @@ function LandingPage() {
                 More Info
               </Button>
             </a>
-            
-            {/* <a href="#services">
-              <Button
-                // data-testid="login-button"
-                className="btn-one"
-                type="submit"
-                onClick="infobutton"
-              >
-                Our Services
-              </Button>
-            </a> */}
           </p>
         </MDBCol>
-        {/* <MDBCol md="3" className="">
-          <p></p>
-        </MDBCol> */}
       </MDBRow>
       <MDBRow>
         <MDBCol md="6" fluid="true" className="text-center formatPic">
@@ -92,7 +77,7 @@ function LandingPage() {
 
       <MDBRow>
         <MDBCol md="6" className="imageBKGR">
-        <p id="services"></p>
+          <p id="services"></p>
           <h3>Chemicals</h3>
           <ul>
             <li>

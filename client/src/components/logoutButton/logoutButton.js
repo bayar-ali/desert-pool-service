@@ -11,7 +11,6 @@ const LogoutButton = () => {
             className="formatButton"
             variant="outline-light"
             type="submit"
-            // style={{ width: '10%' }}
             onClick={() => logout({ returnTo: window.location.origin, })}>
             Log Out
         </Button>

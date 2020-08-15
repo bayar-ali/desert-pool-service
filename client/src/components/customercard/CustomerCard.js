@@ -5,8 +5,6 @@ import { Form } from 'react-bootstrap';
 import moment from "moment";
 
 function CustomerCard({ CustomerRecord, handleChange, nonEditable }) {
-
-    console.log("CustomerRecord on CustomerCard : ", CustomerRecord)
     return (
         <>
             <form className="formatForm">
